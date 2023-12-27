@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import {missionDefaults} from './data/defaults.js'
+import {missionDefaults} from './defaults.js'
 
 const MissionContext = createContext(null);
 
