@@ -1,4 +1,4 @@
-export default function SwinfoEditor() {
+export default function SwinfoPage() {
   return (
     <div>
       <h1>swinfo.json editor</h1>

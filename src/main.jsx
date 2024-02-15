@@ -6,9 +6,9 @@ import '@fontsource/inter'
 
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import ErrorPage from './ErrorPage.jsx'
-import MissionEditor from './routes/missions/mission-editor.jsx'
-import {MissionProvider} from './routes/missions/data/MissionContext.jsx'
-import SwinfoEditor from './routes/swinfo/swinfo-editor.jsx'
+import MissionPage from './routes/missions/mission-page.jsx'
+import {MissionProvider} from './contexts/MissionContext.jsx'
+import SwinfoPage from './routes/swinfo/swinfo-page.jsx'
 import Home from './routes/home/home.jsx'
 
 const router = createBrowserRouter([
@@ -26,11 +26,11 @@ const router = createBrowserRouter([
           },
           {
             path: '/missions',
-            element: <MissionProvider><MissionEditor/></MissionProvider>
+            element: <MissionProvider><MissionPage/></MissionProvider>
           },
           {
             path: '/swinfo',
-            element: <SwinfoEditor/>
+            element: <SwinfoPage/>
           }
         ]
       }

@@ -1,0 +1,14 @@
+{
+    "name": "",
+    "description": "",
+    "Objective": "",
+    "DisplayObjective": true,
+    "RevealObjectiveOnActivate": false,
+    "MissionRewardType": "None",
+    "RewardAmount": null,
+    "MissionReward": {
+        "MissionRewardDefinitions": []
+    },
+    "IgnoreExceptionBranches": false,
+    "actions": []
+}

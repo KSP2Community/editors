@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<svg
+    width="512"
+    height="512"
+    viewBox="0 0 512 512"
+    version="1.1"
+    id="svg5"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs
+        id="defs2"/>
+    <g
+        id="layer1">
+        <path
+            id="path5889"
+            style="color:#000000;fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+            d="M 377.41211,6.7011719 102.41406,288.29492 c 6.40316,-6.04062 26.12652,-20.62106 57.6875,-8.59961 L 419.16992,20.373047 Z"/>
+        <path
+            id="path6098"
+            style="fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+            d="m 128.57271,453.65033 c 0,0 6.3009,-19.41693 -23.0045,-47.58796 C 76.262821,377.89133 56.305958,386.78115 56.305958,386.78115 L 9.6811199,504.54364 Z"/>
+        <g
+            id="rect234-7"
+            transform="matrix(0.51225309,0.47399321,-0.75457257,0.76888474,431.42791,-32.435676)"
+            style="fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">
+            <path
+                id="path5889-0"
+                style="color:#000000;fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+                d="m 174.85542,43.029452 -4.03424,340.090418 c 59.17294,13.97788 59.08593,45.45381 59.08593,45.45381 l 1.39636,-367.10759 z"/>
+        </g>
+        <g
+            id="rect234-3"
+            transform="matrix(0.79183985,0.73269782,-0.75457258,0.76888473,326.32792,-129.68581)"
+            style="fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-dasharray:none;stroke-opacity:1">
+            <path
+                id="path5889-6"
+                style="color:#000000;fill:#4ec210;fill-opacity:1;stroke:#ffffff;stroke-width:0;stroke-linecap:round;stroke-dasharray:none;stroke-opacity:1"
+                d="m 174.85441,43.028603 -2.18148,335.950687 c 7.80923,-1.51767 16.82664,-2.40517 27.28764,-2.42011 10.57562,-0.0151 19.75381,0.86064 27.76279,2.37263 l 2.18359,-335.901885 z"/>
+        </g>
+    </g>
+</svg>
