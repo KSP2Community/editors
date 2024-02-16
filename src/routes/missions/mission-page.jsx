@@ -6,13 +6,7 @@ import {
 } from '@mui/joy'
 
 import {useMission} from '/src/contexts/MissionContext.jsx'
-import MissionEditor from '../../components/missions/MissionEditor.jsx'
-
-function getMaxStageID(missionStages) {
-  return missionStages.reduce((max, stage) => {
-    return stage.StageID > max ? stage.StageID : max
-  }, 0)
-}
+import MissionEditor from '../../components/mission/MissionEditor.jsx'
 
 export default function MissionPage() {
   const {missionData, updateMissionData} = useMission()

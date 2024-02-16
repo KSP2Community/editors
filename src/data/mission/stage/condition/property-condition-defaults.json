@@ -1,0 +1,14 @@
+{
+    "$type": "KSP.Game.Missions.PropertyCondition, Assembly-CSharp",
+    "ConditionType": "PropertyCondition",
+    "PropertyTypeAQN": "",
+    "RequireCurrentValue": true,
+    "valueMet": false,
+    "TestWatchedValue": 0.0,
+    "TestWatchedstring": "",
+    "TestWatchedInt": 0,
+    "TestWatchedBool": true,
+    "propOperator": "EQUAL",
+    "isInput": false,
+    "Inputstring": ""
+}

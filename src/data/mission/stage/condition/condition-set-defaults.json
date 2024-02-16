@@ -1,0 +1,6 @@
+{
+    "$type": "KSP.Game.Missions.ConditionSet, Assembly-CSharp",
+    "ConditionType": "ConditionSet",
+    "ConditionMode": "AND",
+    "Children": []
+}

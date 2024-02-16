@@ -1,0 +1,6 @@
+{
+    "$type": "KSP.Game.Missions.EventCondition, Assembly-CSharp",
+    "ConditionType": "EventCondition",
+    "eventObserved": false,
+    "EventTypeAQN": ""
+}
