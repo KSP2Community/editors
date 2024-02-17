@@ -1,19 +1,12 @@
 import {
-  accordionDetailsClasses,
-  AccordionGroup,
-  accordionSummaryClasses,
-  Box,
   Card,
-  IconButton,
-  Tooltip,
   Typography
 } from '@mui/joy'
 import TextInput from './inputs/TextInput.jsx'
 import DropdownInput from './inputs/DropdownInput.jsx'
 import Toggle from './inputs/Toggle.jsx'
 import AutocompleteInput from './inputs/AutocompleteInput.jsx'
-import {FiPlus} from 'react-icons/fi'
-import BranchEditor from './branch/BranchEditor.jsx'
+import ContentBranchEditor from './branch/ContentBranchEditor.jsx'
 import StageEditor from './stage/StageEditor.jsx'
 
 import missionTypes from '/src/data/mission/mission-type.json'
@@ -23,7 +16,7 @@ import missionGranters from '/src/data/mission/mission-granter-keys.json'
 import missionUiDisplayType from '/src/data/mission/mission-ui-display-type.json'
 import triumphLoopVideos from '/src/data/mission/triumph-loop-video-keys.json'
 import stageDefaults from '/src/data/mission/stage/stage-defaults.json'
-import contentBranchDefaults from '/src/data/mission/content-branch/content-branch-defaults.json'
+import contentBranchDefaults from '/src/data/mission/branch/content-branch-defaults.json'
 import ArrayInput from './inputs/ArrayInput.jsx'
 
 function getMaxStageID(missionStages) {
@@ -106,7 +99,8 @@ export default function MissionEditor({missionData, updateMissionData}) {
                     newBranches.splice(index, 1)
                     updateMissionData("ContentBranches", newBranches)
                   }}
-                  renderComponent={({item, updateData}) => <BranchEditor branch={item} updateBranchData={updateData}/>}
+                  renderComponent={({item, updateData}) => <ContentBranchEditor branch={item}
+                                                                                updateBranchData={updateData}/>}
       />
     </Card>
   )
