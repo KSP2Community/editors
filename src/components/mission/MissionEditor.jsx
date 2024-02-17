@@ -23,7 +23,7 @@ import missionGranters from '/src/data/mission/mission-granter-keys.json'
 import missionUiDisplayType from '/src/data/mission/mission-ui-display-type.json'
 import triumphLoopVideos from '/src/data/mission/triumph-loop-video-keys.json'
 import stageDefaults from '/src/data/mission/stage/stage-defaults.json'
-import branchDefaults from '/src/data/mission/branch/branch-defaults.json'
+import contentBranchDefaults from '/src/data/mission/content-branch/content-branch-defaults.json'
 import ArrayInput from './inputs/ArrayInput.jsx'
 
 function getMaxStageID(missionStages) {
@@ -94,7 +94,7 @@ export default function MissionEditor({missionData, updateMissionData}) {
                   noItemsText="No content branches"
                   itemTitle={({item}) => `Branch ${item.ID}`}
                   addButtonClick={() => updateMissionData("ContentBranches", [...missionData.ContentBranches, {
-                    ...branchDefaults
+                    ...contentBranchDefaults
                   }])}
                   updateData={(index) => (name, value) => {
                     const newBranches = [...missionData.ContentBranches]

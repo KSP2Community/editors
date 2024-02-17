@@ -10,7 +10,7 @@ import {
   Typography
 } from '@mui/joy'
 import {FiPlus, FiTrash} from 'react-icons/fi'
-import * as React from 'react'
+import {useState} from 'react'
 
 import DeleteDialog from './DeleteDialog.jsx'
 
@@ -28,14 +28,17 @@ export default function ArrayInput(
     level = 0
   }
 ) {
-  const [deleteDialogOpenIndex, setDeleteDialogOpenIndex] = React.useState(-1)
+  const [deleteDialogOpenIndex, setDeleteDialogOpenIndex] = useState(-1)
 
   return <>
     <Box sx={{
       display: 'flex',
       justifyContent: 'space-between',
     }}>
-      <Typography level={`h${5 + level}`} component={`h${3 + level}`}>{title}</Typography>
+      <Typography level={`h${5 + level}`} component={`h${3 + level}`} sx={{
+        m: 0,
+        alignSelf: 'center'
+      }}>{title}</Typography>
       <Tooltip title={addButtonText}>
         <IconButton onClick={addButtonClick}>
           <FiPlus/>

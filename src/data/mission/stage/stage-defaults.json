@@ -10,5 +10,9 @@
         "MissionRewardDefinitions": []
     },
     "IgnoreExceptionBranches": false,
-    "actions": []
+    "actions": [],
+    "branches": [],
+    "scriptableCondition": null,
+    "completed": false,
+    "active": false
 }

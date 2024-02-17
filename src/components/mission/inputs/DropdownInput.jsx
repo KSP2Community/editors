@@ -14,7 +14,7 @@ export default function DropdownInput({name, label, options, value, onChange}) {
             <Option key={option} value={option}>{option}</Option>
           )) :
           Object.entries(options).map(([key, value]) => (
-            <Option key={option} value={key}>{value}</Option>
+            <Option key={key} value={key}>{value}</Option>
           ))}
       </Select>
     </FormControl>

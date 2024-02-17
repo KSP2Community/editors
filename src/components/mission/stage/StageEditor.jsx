@@ -22,7 +22,9 @@ export default function StageEditor({stage, updateStageData}) {
             value={stage.RevealObjectiveOnActivate} onChange={updateStageData}/>
 
     <Typography level="h5" component="h3">Condition</Typography>
-    <ConditionEditor/>
+    <ConditionEditor condition={stage.scriptableCondition} updateData={
+      condition => updateStageData("scriptableCondition", {...condition})
+    }/>
 
     <ArrayInput level={1}
                 array={stage.MissionReward.MissionRewardDefinitions}

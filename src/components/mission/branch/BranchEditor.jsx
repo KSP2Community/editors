@@ -2,7 +2,7 @@ import {Typography} from '@mui/joy'
 import * as React from 'react'
 import DropdownInput from '../inputs/DropdownInput.jsx'
 
-import branchIDKeys from '/src/data/mission/branch/branch-id-keys.json'
+import branchIDKeys from '/src/data/mission/content-branch/content-branch-id-keys.json'
 import ActionEditor from '../action/ActionEditor.jsx'
 
 export default function BranchEditor({branch, updateBranchData}) {

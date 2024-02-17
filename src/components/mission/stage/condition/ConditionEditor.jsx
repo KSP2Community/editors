@@ -1,88 +1,59 @@
-import * as React from 'react'
-import {
-  Accordion, AccordionDetails,
-  accordionDetailsClasses,
-  AccordionGroup, AccordionSummary,
-  accordionSummaryClasses,
-  Box, Button,
-  IconButton,
-  Tooltip,
-  Typography
-} from '@mui/joy'
-import {FiPlus, FiTrash} from 'react-icons/fi'
+import {useState} from 'react'
 
-import DeleteDialog from '../../inputs/DeleteDialog.jsx'
+import DropdownInput from '../../inputs/DropdownInput.jsx'
+import ConditionSetEditor from './ConditionSetEditor.jsx'
+import EventConditionEditor from './EventConditionEditor.jsx'
+import PropertyConditionEditor from './PropertyConditionEditor.jsx'
 
-export default function ConditionEditor() {
-    const [deleteDialogOpenIndex, setDeleteDialogOpenIndex] = React.useState(-1)
+import conditionSetDefaults from '/src/data/mission/stage/condition/condition-set-defaults.json'
+import eventConditionDefaults from '/src/data/mission/stage/condition/event-condition-defaults.json'
+import propertyConditionDefaults from '/src/data/mission/stage/condition/property-condition-defaults.json'
 
-    return <>
-      {/*<Box sx={{*/}
-      {/*  display: 'flex',*/}
-      {/*  justifyContent: 'space-between',*/}
-      {/*}}>*/}
-      {/*  <Typography level={`h${4 + level}`} component={`h${2 + level}`}>{title}</Typography>*/}
-      {/*  <Tooltip title={addButtonText}>*/}
-      {/*    <IconButton onClick={addButtonClick}>*/}
-      {/*      <FiPlus/>*/}
-      {/*    </IconButton>*/}
-      {/*  </Tooltip>*/}
-      {/*</Box>*/}
+export const NONE = "None"
+export const CONDITION_SET = "ConditionSet"
+export const EVENT_CONDITION = "EventCondition"
+export const PROPERTY_CONDITION = "PropertyCondition"
 
-      {/*<AccordionGroup*/}
-      {/*  variant="outlined"*/}
-      {/*  sx={{*/}
-      {/*    flexGrow: 0,*/}
-      {/*    borderRadius: 'lg',*/}
-      {/*    [`& .${accordionSummaryClasses.button}:hover`]: {*/}
-      {/*      bgcolor: 'transparent !important',*/}
-      {/*    },*/}
-      {/*    [`& .${accordionDetailsClasses.content}`]: {*/}
-      {/*      boxShadow: (theme) => `inset 0 1px ${theme.vars.palette.divider} !important`,*/}
-      {/*      [`&.${accordionDetailsClasses.expanded}`]: {*/}
-      {/*        paddingBlock: '0.75rem',*/}
-      {/*      },*/}
-      {/*    },*/}
-      {/*  }}*/}
-      {/*>*/}
-      {/*  {array.length*/}
-      {/*    ? array.map((item, index) => {*/}
-      {/*      const itemTitleText = typeof itemTitle === 'function'*/}
-      {/*        ? itemTitle({item, index})*/}
-      {/*        : itemTitle*/}
+const conditionTypes = {
+  [NONE]: "None",
+  [CONDITION_SET]: "Condition Set",
+  [EVENT_CONDITION]: "Event Condition",
+  [PROPERTY_CONDITION]: "Property Condition"
+}
 
-      {/*      return (*/}
-      {/*        <Accordion key={index} sx={{*/}
-      {/*          '&:last-child': {*/}
-      {/*            borderBottomWidth: 0,*/}
-      {/*          }*/}
-      {/*        }}>*/}
-      {/*          <AccordionSummary>*/}
-      {/*            <Typography level="h5" component="h3">{itemTitleText}</Typography>*/}
-      {/*          </AccordionSummary>*/}
-      {/*          <AccordionDetails variant="soft">*/}
-      {/*            <Box sx={{*/}
-      {/*              display: 'flex',*/}
-      {/*              flexDirection: 'column',*/}
-      {/*              gap: '0.75rem 1rem'*/}
-      {/*            }}>*/}
-      {/*              {renderComponent({item, index, updateData: updateData(index)})}*/}
-      {/*              <Button variant="outlined" color="danger" startDecorator={<FiTrash/>}*/}
-      {/*                      onClick={() => setDeleteDialogOpenIndex(index)}>*/}
-      {/*                Delete {itemTitleText}*/}
-      {/*              </Button>*/}
-      {/*              <DeleteDialog labelToDelete={itemTitleText} open={deleteDialogOpenIndex === index}*/}
-      {/*                            onClose={() => setDeleteDialogOpenIndex(-1)} onDelete={() => deleteData(index)}/>*/}
-      {/*            </Box>*/}
-      {/*          </AccordionDetails>*/}
-      {/*        </Accordion>*/}
-      {/*      )*/}
-      {/*    })*/}
-      {/*    : <Typography sx={{*/}
-      {/*      textAlign: 'center',*/}
-      {/*      color: 'text.tertiary',*/}
-      {/*      m: '0.5rem'*/}
-      {/*    }}>{noItemsText}</Typography>}*/}
-      {/*</AccordionGroup>*/}
-    </>
-  }
+const conditionTypeToComponent = {
+  [CONDITION_SET]: ConditionSetEditor,
+  [EVENT_CONDITION]: EventConditionEditor,
+  [PROPERTY_CONDITION]: PropertyConditionEditor
+}
+
+export const conditionTypeToDefault = {
+  [CONDITION_SET]: conditionSetDefaults,
+  [EVENT_CONDITION]: eventConditionDefaults,
+  [PROPERTY_CONDITION]: propertyConditionDefaults
+}
+
+export default function ConditionEditor({condition, updateData}) {
+  const [conditionType, setConditionType] = useState(condition ? condition.ConditionType : NONE)
+
+  const EditorComponent = conditionTypeToComponent[conditionType] ?? null
+
+  return <>
+    <DropdownInput name="TypeSelector" label="Condition Type" options={conditionTypes} value={conditionType}
+                   onChange={(_, newValue) => {
+                     setConditionType(newValue)
+
+                     if (newValue === NONE) {
+                       updateData(null)
+                       return
+                     }
+
+                     updateData({...conditionTypeToDefault[newValue]})
+                   }}/>
+    {EditorComponent && <EditorComponent condition={condition} updateData={
+      (name, value) => {
+        updateData({...condition, ...{[name]: value}})
+      }
+    }/>}
+  </>
+}
