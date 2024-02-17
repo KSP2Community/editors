@@ -1,16 +1,15 @@
-import AutocompleteInput from '../../inputs/AutocompleteInput.jsx'
-
-import propertyTypes from '/src/data/mission/stage/condition/property-type.json'
 import Toggle from '../../inputs/Toggle.jsx'
 import TextInput from '../../inputs/TextInput.jsx'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
+import ComplexAutocompleteInput from '../../inputs/ComplexAutocompleteInput.jsx'
 
+import propertyTypes from '/src/data/mission/stage/condition/property-type.json'
 import propertyOperators from '/src/data/mission/stage/condition/property-operator.json'
 
 export default function PropertyConditionEditor({condition, updateData}) {
   return <>
-    <AutocompleteInput name="PropertyTypeAQN" label="Property Type" value={condition.PropertyTypeAQN}
-                       onChange={updateData} options={propertyTypes}/>
+    <ComplexAutocompleteInput name="PropertyTypeAQN" label="Property Type" value={condition.PropertyTypeAQN}
+                              onChange={updateData} options={propertyTypes} placeholder="Select property type"/>
     <Toggle name="RequireCurrentValue" label="Require Current Value" value={condition.RequireCurrentValue}
             onChange={updateData}/>
     <TextInput name="TestWatchedstring" label="Watched String Value" value={condition.TestWatchedstring}

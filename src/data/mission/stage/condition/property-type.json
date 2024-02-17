@@ -1,65 +1,806 @@
-{
-    "Active Vessel Target Celestial Body": "Target",
-    "Altitude Above Ground Level": "Position and orientation",
-    "Altitude Above Sea Level": "Position and orientation",
-    "Altitude Difference From Mission Destination": "Mission status",
-    "Apoapsis": "Orbit",
-    "Atmospheric Pressure": "Vessel",
-    "Crew Count": "Vessel",
-    "Current Game State": "Game",
-    "Current Research Location": "Research",
-    "Current SOI": "Orbit",
-    "Current Science Available": "Research",
-    "Delta V": "Vessel",
-    "Distance From Mission Destination": "Mission status",
-    "Electric Charge Production Rate": "Vessel",
-    "Electricity Level": "Vessel status",
-    "Entered SOI": "Orbit",
-    "Fuel Level Percentage": "Vessel status",
-    "Has Been To Research Location": "Research",
-    "Has Part In VAB Family": "Vessel status",
-    "Has Scored Research Report": "Research",
-    "Has Stored Research Report": "Research",
-    "Heading": "Position and orientation",
-    "In Contact with Ground": "Position and orientation",
-    "Is Player Currently In The Map": "Game",
-    "Is Player On EVA": "Game",
-    "Landed on Celestial Body": "Mission status",
-    "Latitude": "Position and orientation",
-    "Latitude Difference From Mission Destination": "Mission status",
-    "Longitude": "Position and orientation",
-    "Longitude Difference From Mission Destination": "Mission status",
-    "Maintained Speed for 5 Seconds": "Mission status",
-    "Maneuver Apoapsis": "Orbit",
-    "Maneuver Enters SOI": "Orbit",
-    "Mass": "Vessel",
-    "Orbital Eccentricity": "Orbit",
-    "Orbital Inclination": "Orbit",
-    "Orbital Speed": "Orbit",
-    "Part Activated": "Vessel",
-    "Part Count": "Vessel",
-    "Part In Stage": "Vessel",
-    "Periapsis": "Orbit",
-    "Pitch": "Position and orientation",
-    "Pitch Trim": "Position and orientation",
-    "Player Is Controlling Vehicle": "Game",
-    "Predicted SOI Transition": "Orbit",
-    "Roll": "Position and orientation",
-    "Roll Trim": "Position and orientation",
-    "Rover Wheel Count": "Vessel",
-    "Stage Count": "Vessel",
-    "Stage Fuel Level": "Vessel",
-    "Surface Speed": "Position and orientation",
-    "Target Distance": "Target",
-    "Target Speed": "Target",
-    "Throttle": "Vessel",
-    "Time From Apoapsis": "Time",
-    "Time Warp Speed": "Time",
-    "Time of Day": "Time",
-    "Vehicle Destroyed By Collision With Celestial Body": "Vessel",
-    "Vehicle Has Command Module": "Vessel",
-    "Vehicle Has Part": "Vessel",
-    "Vehicle is Braking": "Vessel",
-    "Yaw": "Position and orientation",
-    "Yaw Trim": "Position and orientation"
-}
+[
+    {
+        "description": "Returns the currently active camera group number.",
+        "type": "KSP.Messages.PropertyWatchers.ActiveCameraGroupPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Active Camera Group",
+        "category": "Camera"
+    },
+    {
+        "description": "The name of the Celestial body that the active vessel is targeting.",
+        "type": "KSP.Messages.PropertyWatchers.ActiveVehicleTargetCelestialBody, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Active Vehicle Target Celestial Body",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Distance in meters of the camera from its gimbal origin (0 = at gimbal, is always positive)",
+        "type": "KSP.Messages.PropertyWatchers.CameraGimbalDistancePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Gimbal Distance",
+        "category": "Camera"
+    },
+    {
+        "description": "Left/Right rotation in degrees of the camera around the gimbal Y axis (0 = gimbal 'forward', increasing clockwise)",
+        "type": "KSP.Messages.PropertyWatchers.CameraGimbalHeadingPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Gimbal Heading",
+        "category": "Camera"
+    },
+    {
+        "description": "Up/Down rotation in degrees of the camera around the gimbal's X axis (-90 = gimbal down, 90 = gimbal up)",
+        "type": "KSP.Messages.PropertyWatchers.CameraGimbalPitchPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Gimbal Pitch",
+        "category": "Camera"
+    },
+    {
+        "description": "Up/Down rotation in degrees applied to the camera in its local coordinate system. (-90 = local down, 90 = local up)",
+        "type": "KSP.Messages.PropertyWatchers.CameraLocalPitchPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Local Pitch",
+        "category": "Camera"
+    },
+    {
+        "description": "Rotation in degrees of the camera around its forward (Z) axis (increasing clockwise)",
+        "type": "KSP.Messages.PropertyWatchers.CameraLocalRollPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Local Roll",
+        "category": "Camera"
+    },
+    {
+        "description": "Left/Right Rotation in degrees applied to the camera in its local coordinate system. (0 = local 'forward', increasing clockwise)",
+        "type": "KSP.Messages.PropertyWatchers.CameraLocalYawPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Local Yaw",
+        "category": "Camera"
+    },
+    {
+        "description": "True if camera is below water level.",
+        "type": "KSP.Messages.PropertyWatchers.CameraUnderWaterPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Camera Under Water",
+        "category": "Camera"
+    },
+    {
+        "description": "Returns the name of the last celestial body that the player opened the right-click context menu on.",
+        "type": "KSP.Messages.PropertyWatchers.CelestialBodyContextMenuOpened, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Celestial Body Context Menu Opened",
+        "category": "Game"
+    },
+    {
+        "description": "Most recent orbital body discovered by player",
+        "type": "KSP.Messages.PropertyWatchers.CelestialBodyDiscoveredPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Celestial Body Discovered",
+        "category": "Game"
+    },
+    {
+        "description": "Return the celestial body a player has selected in Map View.",
+        "type": "KSP.Messages.PropertyWatchers.CelestialBodySelected, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Celestial Body Selected",
+        "category": "Game"
+    },
+    {
+        "description": "The target Celestial Body name.",
+        "type": "KSP.Messages.PropertyWatchers.CelestialBodyTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Celestial Body Target",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the current number of Kerbals on board the vehicle.",
+        "type": "KSP.Messages.PropertyWatchers.CrewCount, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Crew Count",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the current game state",
+        "type": "KSP.Messages.PropertyWatchers.CurrentGameStatePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Current Game State",
+        "category": "Game"
+    },
+    {
+        "description": "Returns the amount of science the local player currently has available to spend.",
+        "type": "KSP.Messages.PropertyWatchers.CurrentScienceAvailable, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Current Science Available",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The rate of electrical charge the vessel is receiving",
+        "type": "KSP.Messages.PropertyWatchers.ElectricChargeProductionRate, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Electric Charge Production Rate",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the amount of electricity stored as a percentage of its capacity",
+        "type": "KSP.Messages.PropertyWatchers.ElectricityLevel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Electricity Level",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the name of the celestial body sphere of influence the active vehicle's current trajectory is predicted to enter.",
+        "type": "KSP.Messages.PropertyWatchers.EscapeTrajectorySOIPredictedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Escape Trajectory SOIPredicted",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Kerbal's situation, ie. land, water, atmosphere, low orbit, etc.",
+        "type": "KSP.Messages.PropertyWatchers.EVAKerbalSituationPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "EVA Kerbal Situation",
+        "category": "Game"
+    },
+    {
+        "description": "The difference in altitude from a point on a celestial body set by a mission action.",
+        "type": "KSP.Messages.PropertyWatchers.FlightVehicleAltitudeDiffFromPosition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Flight Vehicle Altitude Diff From Position",
+        "category": "Flight"
+    },
+    {
+        "description": "The distance from a point on a celestial body set by a mission action.",
+        "type": "KSP.Messages.PropertyWatchers.FlightVehicleDistanceFromPosition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Flight Vehicle Distance From Position",
+        "category": "Flight"
+    },
+    {
+        "description": "The difference in latitude from a point on a celestial body set by a mission action.",
+        "type": "KSP.Messages.PropertyWatchers.FlightVehicleLatitudeDiffFromPosition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Flight Vehicle Latitude Diff From Position",
+        "category": "Flight"
+    },
+    {
+        "description": "The difference in longitude from a point on a celestial body set by a mission action.",
+        "type": "KSP.Messages.PropertyWatchers.FlightVehicleLongitudeDiffFromPosition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Flight Vehicle Longitude Diff From Position",
+        "category": "Flight"
+    },
+    {
+        "description": "Indicates if the active vessel has been to the provided research location",
+        "type": "KSP.Messages.PropertyWatchers.HasBeenToResearchLocation, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Been To Research Location",
+        "category": "Vehicle"
+    },
+    {
+        "description": "True if vessel has a command module.",
+        "type": "KSP.Messages.PropertyWatchers.HasCommand, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Command",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The vehicle has a specific part.",
+        "type": "KSP.Messages.PropertyWatchers.HasPart, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Part",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Allows us to check if a vessel has a specific part in the VAB family grouping.",
+        "type": "KSP.Messages.PropertyWatchers.HasPartInGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Part In Group",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The specified report has been scored.",
+        "type": "KSP.Messages.PropertyWatchers.HasScoredResearchReport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Scored Research Report",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Indicates if the specific research report is stored on the current vehicle.",
+        "type": "KSP.Messages.PropertyWatchers.HasStoredResearchReport, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Has Stored Research Report",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for pitching down, value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldPitchDownDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Pitch Down Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for pitching up., value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldPitchUpDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Pitch Up Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for rolling left (counter-clockwise), value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldRollLeftDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Roll Left Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for rolling right (clockwise), value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldRollRightDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Roll Right Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for yawing left, value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldYawLeftDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Yaw Left Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "Returns a double value representing how many seconds the player has been holding an input for yawing right, value resets to 0 if the input is released.",
+        "type": "KSP.Messages.PropertyWatchers.InputHeldYawRightDuration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Input Held Yaw Right Duration",
+        "category": "Flight"
+    },
+    {
+        "description": "The player is actively controlling a vehicle.",
+        "type": "KSP.Messages.PropertyWatchers.IsActiveVessel, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Is Active Vessel",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Indicates if the active vessel is an EVA Kerbal.",
+        "type": "KSP.Messages.PropertyWatchers.IsActiveVesselEva, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Is Active Vessel EVA",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Indicates if the active vessel was destroyed by a collision with the indicated celestial body",
+        "type": "KSP.Messages.PropertyWatchers.IsDestroyedByCbCollision, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Is Destroyed By CB Collision",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the previous game state",
+        "type": "KSP.Messages.PropertyWatchers.LastGameStatePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Last Game State",
+        "category": "Game"
+    },
+    {
+        "description": "Returns the UniqueID of the last part that the player attached another part to. This is useful for checking more specific placement, and essential for tutorials that use compound parts like struts.",
+        "type": "KSP.Messages.PropertyWatchers.LastPartAttachedTo, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Last Part Attached To",
+        "category": "OAB"
+    },
+    {
+        "description": "",
+        "type": "KSP.Messages.PropertyWatchers.LoopPlayerVideoPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Loop Player Video",
+        "category": "General"
+    },
+    {
+        "description": "Time to maneuver in seconds. Negative going to maneuver. Positive if past Maneuver. 9999 ",
+        "type": "KSP.Messages.PropertyWatchers.ManeuverETA, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Maneuver ETA",
+        "category": "Maneuver"
+    },
+    {
+        "description": "The player's maneuver plan enters a specific Celestial Body SOI.",
+        "type": "KSP.Messages.PropertyWatchers.ManeuverPlanEntersSOI, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Maneuver Plan Enters SOI",
+        "category": "Maneuver"
+    },
+    {
+        "description": "This value is 1/true if the player is currently in the map, and 0/false if in flight view instead. We need this for double-checking if the player is already in the map in steps where we ask them to go to the map.",
+        "type": "KSP.Messages.PropertyWatchers.MapEnabled, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Map Enabled",
+        "category": "Map"
+    },
+    {
+        "description": "Returns true or false if the active mission current stage passes the passed in value.",
+        "type": "KSP.Messages.PropertyWatchers.MissionActiveStagePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Mission Active Stage",
+        "category": "MissionData"
+    },
+    {
+        "description": "Returns the category name of the last category selected",
+        "type": "KSP.Messages.PropertyWatchers.OABCategorySelectedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Category Selected",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the currently selected symmetry value.",
+        "type": "KSP.Messages.PropertyWatchers.OABCurrentSymmetryValuePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Current Symmetry Value",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the UniqueID of the last part the player deleted.",
+        "type": "KSP.Messages.PropertyWatchers.OABLastPartDeletedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Last Part Deleted",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the UniqueID of the last part the player put down in the OAB, will return an empty string if the last placed part becomes deleted for any reason.",
+        "type": "KSP.Messages.PropertyWatchers.OABLastPartPlacedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Last Part Placed",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the UniqueID of the Last part selected in staging stack.",
+        "type": "KSP.Messages.PropertyWatchers.OABLastPartSelectedInStagingStackPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Last Part Selected In Staging Stack",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the UniqueID of the last part the player selected.",
+        "type": "KSP.Messages.PropertyWatchers.OABLastPartSelectedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Last Part Selected",
+        "category": "OAB"
+    },
+    {
+        "description": "The player's vehicle contains a specific part",
+        "type": "KSP.Messages.PropertyWatchers.OABPartOnMainAssemblyPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Part On Main Assembly",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the OAB workspace filename that was most recently loaded",
+        "type": "KSP.Messages.PropertyWatchers.OABWorkspaceFileLoadedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Workspace File Loaded",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the OAB workspace filename that was most recently selected",
+        "type": "KSP.Messages.PropertyWatchers.OABWorkspaceFileSelectedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Workspace File Selected",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in X between the current assemly Center of Lift and Center of Mass, returns 9999 if any reference is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABXAxisCenterOfLiftOffsetCenterOfMassPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB X-Axis Center Of Lift Offset Center Of Mass",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in X within the last placed part and the highlight attach point in world coords, returns 9999 if any is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABXAxisLastPartPlacedOffsetHighlightPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB X-Axis Last Part Placed Offset Highlight",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in Y between the current assemly Center of Lift and Center of Mass, returns 9999 if any reference is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABYAxisCenterOfLiftOffsetCenterOfMassPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Y-Axis Center Of Lift Offset Center Of Mass",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in Y within the last placed part and the highlight attach point in world coords, returns 9999 if any is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABYAxisLastPartPlacedOffsetHighlightPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Y-Axis Last Part Placed Offset Highlight",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in Z between the current assemly Center of Lift and Center of Mass, returns 9999 if any reference is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABZAxisCenterOfLiftOffsetCenterOfMassPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Z-Axis Center Of Lift Offset Center Of Mass",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the offset in Z within the last placed part and the highlight attach point in world coords, returns 9999 if any is invalid",
+        "type": "KSP.Messages.PropertyWatchers.OABZAxisLastPartPlacedOffsetHighlightPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "OAB Z-Axis Last Part Placed Offset Highlight",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the orbital eccentricity of the active vessel if one exists.",
+        "type": "KSP.Messages.PropertyWatchers.OrbitEccentricity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Orbit Eccentricity",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the orbital inclination of the active vessel if one exists.",
+        "type": "KSP.Messages.PropertyWatchers.OrbitInclination, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Orbit Inclination",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the last FTUE mission stage completed index.",
+        "type": "KSP.Messages.PropertyWatchers.OtherFTUEMissionLastStageCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Other FTUE Mission Last Stage Completed",
+        "category": "MissionData"
+    },
+    {
+        "description": "Returns the last FTUE mission stage completed index.",
+        "type": "KSP.Messages.PropertyWatchers.OtherMissionLastStageCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Other Mission Last Stage Completed",
+        "category": "MissionData"
+    },
+    {
+        "description": "Returns the last Tutorial mission stage completed index.",
+        "type": "KSP.Messages.PropertyWatchers.OtherTutorialLastStageCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Other Tutorial Last Stage Completed",
+        "category": "MissionData"
+    },
+    {
+        "description": "The player has activated a specific Part on a vehicle.",
+        "type": "KSP.Messages.PropertyWatchers.PartActivated, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Part Activated",
+        "category": "Vehicle"
+    },
+    {
+        "description": "True if vessel has a command module.",
+        "type": "KSP.Messages.PropertyWatchers.PartCount, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Part Count",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The player has a specific part in a specific stage.",
+        "type": "KSP.Messages.PropertyWatchers.PartInStage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Part In Stage",
+        "category": "OAB"
+    },
+    {
+        "description": "Maneuver node apoapsis value in double (above the celestial body radius level).",
+        "type": "KSP.Messages.PropertyWatchers.PlannedManeuverApoapsis, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Planned Maneuver Apoapsis",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Current procedural Control Surface Chord Length value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralControlSurfaceChordLengthPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Control Surface Chord Length",
+        "category": "OAB"
+    },
+    {
+        "description": "Current procedural Control Position value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralControlSurfacePositionPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Control Surface Position",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing Control Surface Span value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralControlSurfaceSpanPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Control Surface Span",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing Sweep Angle value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingAnglePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Angle",
+        "category": "OAB"
+    },
+    {
+        "description": "Current procedural Wing Control Surface Chord Length value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingControlSurfaceChordLengthPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Control Surface Chord Length",
+        "category": "OAB"
+    },
+    {
+        "description": "String Status true or false if the current wing has control surface.",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingControlSurfaceStatusPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Control Surface Status",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing Root Chord Length value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingRootLengthPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Root Length",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing Root Thickness value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingRootThicknessPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Root Thickness",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing Span value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingSpanPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Span",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing EndToe InOut Angle value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingTipAnglePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Tip Angle",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing End Chord Length value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingTipLengthPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Tip Length",
+        "category": "OAB"
+    },
+    {
+        "description": "Current wing End Thickness value",
+        "type": "KSP.Messages.PropertyWatchers.ProceduralWingTipThicknessPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Procedural Wing Tip Thickness",
+        "category": "OAB"
+    },
+    {
+        "description": "Returns the current sas mode",
+        "type": "KSP.Messages.PropertyWatchers.SASMode, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "SAS Mode",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The type of research most recently collected by a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.ScienceResearchTypePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Science Research Type",
+        "category": "Science"
+    },
+    {
+        "description": "Active vessel maintained ground contact speed above the specified value for 5 seconds.",
+        "type": "KSP.Messages.PropertyWatchers.SpeedMaintained, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Speed Maintained",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the active stage's fuel level as a percentage out of 100",
+        "type": "KSP.Messages.PropertyWatchers.StageFuelLevelPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Stage Fuel Level",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The player has added N number stage. i.e. Added Stage 02",
+        "type": "KSP.Messages.PropertyWatchers.StageNumberAdded, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Stage Number Added",
+        "category": "OAB"
+    },
+    {
+        "description": "The player has remved N number stage. i.e. Removed Stage 02",
+        "type": "KSP.Messages.PropertyWatchers.StageNumberRemoved, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Stage Number Removed",
+        "category": "OAB"
+    },
+    {
+        "description": "Most recent technology unlocked by player",
+        "type": "KSP.Messages.PropertyWatchers.TechUnlockedDiscoveredPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Tech Unlocked Discovered",
+        "category": "Game"
+    },
+    {
+        "description": "Returns the vehicle throttle",
+        "type": "KSP.Messages.PropertyWatchers.Throttle, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Throttle",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Time from apoapsis value in double.",
+        "type": "KSP.Messages.PropertyWatchers.TimeFromApoapsis, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Time From Apoapsis",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The difference in latitude from a point on a celestial body set by a mission action.",
+        "type": "KSP.Messages.PropertyWatchers.TimeFromApoapsisAtOrbitClick, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Time From Apoapsis At Orbit Click",
+        "category": "Flight"
+    },
+    {
+        "description": "Time of day 24hrs format",
+        "type": "KSP.Messages.PropertyWatchers.TimeOfDayPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Time Of Day",
+        "category": "Game"
+    },
+    {
+        "description": "Returns the currently Selected Time Zoom Step Speed",
+        "type": "KSP.Messages.PropertyWatchers.TimeZoomSpeedSelectedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Time Zoom Speed Selected",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the currently Selected Time Zoom Step",
+        "type": "KSP.Messages.PropertyWatchers.TimeZoomStepSelectedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Time Zoom Step Selected",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The celestial body a player has targeted in the Trip Planner.",
+        "type": "KSP.Messages.PropertyWatchers.TripPlannerCelestialBodyTarget, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Trip Planner Celestial Body Target",
+        "category": "OAB"
+    },
+    {
+        "description": "Apoapsis altitude of a vehicle's orbit",
+        "type": "KSP.Messages.PropertyWatchers.VehicleApoapsisAltitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Apoapsis Altitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The static pressure in pascals",
+        "type": "KSP.Messages.PropertyWatchers.VehicleAtmosphericPressurePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Atmospheric Pressure",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Radius of the vehicle's Bounding Sphere ",
+        "type": "KSP.Messages.PropertyWatchers.VehicleBoundingSphereRadiusPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Bounding Sphere Radius",
+        "category": "Vehicle"
+    },
+    {
+        "description": "A 0-1 indicator if any part of a vehicle is applying a brake. 0 indicates an invalid active vessel.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleBrakingListener, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Braking Listener",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Weight of all resources in storage tanks. Does not include fuel in fuel tanks.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleCargoWeightPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Cargo Weight",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Active Vessel Heading Coordinate value in double.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleHeadingPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Heading",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Active Vessel Latitude Coordinate value in double.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleLatitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Latitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Active Vessel Longitude Coordinate value.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleLongitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Longitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "A specific part of a player's vehicle is in contact with a ground surface.",
+        "type": "KSP.Messages.PropertyWatchers.VehiclePartInContactWithGroundSurfacePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Part In Contact With Ground Surface",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Periapsis altitude of a vehicle's orbit",
+        "type": "KSP.Messages.PropertyWatchers.VehiclePeriapsisAltitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Periapsis Altitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The pitch of a vehicle in degrees",
+        "type": "KSP.Messages.PropertyWatchers.VehiclePitchedDegrees, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Pitched Degrees",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Types of resources present on a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleResourceTypesPresentPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Resource Types Present",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Weight of all resources on a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleResourceWeightPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Resource Weight",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The roll of a vehicle in degrees",
+        "type": "KSP.Messages.PropertyWatchers.VehicleRolledDegrees, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Rolled Degrees",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Number of discrete vehicles docked together",
+        "type": "KSP.Messages.PropertyWatchers.VehiclesDockedCountPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicles Docked Count",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The altitude situation of a vehicle, ie. High Orbit, Low Orbit, Atmosphere, Landed",
+        "type": "KSP.Messages.PropertyWatchers.VehicleSituationAltitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Situation Altitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The biome situation of a vehicle, ie. Highlands, Lowlands, Polar, etc.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleSituationBiomePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Situation Biome",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Current number of stages on a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleStageCountPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Stage Count",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The trim pitch of a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleTrimPitchPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Trim Pitch",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The trim roll of a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleTrimRollPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Trim Roll",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The trim yaw of a vehicle",
+        "type": "KSP.Messages.PropertyWatchers.VehicleTrimYawPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Trim Yaw",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the current main assembly or active vessel total DeltaV, -1 for no active vessel or Assembly",
+        "type": "KSP.Messages.PropertyWatchers.VehicleVesselDeltaV, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Vessel Delta V",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Used by FTUE when a player constructs a vehicle that is too big.",
+        "type": "KSP.Messages.PropertyWatchers.VehicleWithinBuildBounds, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Within Build Bounds",
+        "category": "OAB"
+    },
+    {
+        "description": "The yaw of a vehicle in degrees",
+        "type": "KSP.Messages.PropertyWatchers.VehicleYawedDegrees, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vehicle Yawed Degrees",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the name of the celestial body that's the vessel's current SOI",
+        "type": "KSP.Messages.PropertyWatchers.VesselAudioSOIPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Audio SOI",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the active stage's fuel level as a percentage out of 100",
+        "type": "KSP.Messages.PropertyWatchers.VesselFuelLevelPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Fuel Level",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The altitude of the vehicle above the ground level of the current CB",
+        "type": "KSP.Messages.PropertyWatchers.VesselGroundLevelAltitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Ground Level Altitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Indicates if the active vessel has ever been to the provided SOI.",
+        "type": "KSP.Messages.PropertyWatchers.VesselHasEnteredSOIPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Has Entered SOI",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Indicates if the active vessel has ever landed on the provided CB.",
+        "type": "KSP.Messages.PropertyWatchers.VesselHasLandedOnCBPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Has Landed On CB",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The current mass (resource inclusive) of the active vessel.",
+        "type": "KSP.Messages.PropertyWatchers.VesselMass, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Mass",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Speed of the vehicle in orbit around its CelestialBody",
+        "type": "KSP.Messages.PropertyWatchers.VesselOrbitSpeedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Orbit Speed",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the research location that the active vessel is currently present in.",
+        "type": "KSP.Messages.PropertyWatchers.VesselResearchLocation, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Research Location",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The altitude of the vehicle above the sea level of the current CB",
+        "type": "KSP.Messages.PropertyWatchers.VesselSeaLevelAltitudePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Sea Level Altitude",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Returns the name of the celestial body that's the vessel's current SOI",
+        "type": "KSP.Messages.PropertyWatchers.VesselSOIPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel SOI",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Speed of the vehicle with respect to the surface of its reference CelestialBody",
+        "type": "KSP.Messages.PropertyWatchers.VesselSurfaceSpeedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Surface Speed",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Distance of the vehicle to the targeted object",
+        "type": "KSP.Messages.PropertyWatchers.VesselTargetDistancePropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Target Distance",
+        "category": "Vehicle"
+    },
+    {
+        "description": "Speed of the vehicle with respect to targeted object",
+        "type": "KSP.Messages.PropertyWatchers.VesselTargetSpeedPropertyWatcher, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Vessel Target Speed",
+        "category": "Vehicle"
+    },
+    {
+        "description": "The number of wheels on the active vessel.",
+        "type": "KSP.Messages.PropertyWatchers.WheelCount, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
+        "label": "Wheel Count",
+        "category": "Vehicle"
+    }
+]

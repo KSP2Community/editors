@@ -1,0 +1,2474 @@
+[
+    {
+        "description": "Vessel's heat shield has ablator remaining.",
+        "category": "Part Module",
+        "label": "Ablator Available",
+        "type": "KSP.Messages.AblatorAvailableMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player is aborting the current tutorial",
+        "category": "Mission",
+        "label": "Abort Tutorial",
+        "type": "KSP.Messages.AbortTutorial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has created an action group",
+        "category": "OAB",
+        "label": "Action Group Created",
+        "type": "KSP.Messages.ActionGroupCreatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Action Group Manager Opened",
+        "type": "KSP.Messages.ActionGroupManagerOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Action Group Mapping Changed",
+        "type": "KSP.Messages.ActionGroupMappingChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Fired when the time to reach the Active Maneuver Node is 0.",
+        "category": "Flight",
+        "label": "Active Maneuver Node Reached",
+        "type": "KSP.Messages.ActiveManeuverNodeReachedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The active vessel has been destroyed",
+        "category": "Flight",
+        "label": "Active Vessel Destroyed",
+        "type": "KSP.Messages.ActiveVesselDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Add Vessel To Map",
+        "type": "KSP.Messages.AddVesselToMapMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "Assembly Action Groups Changed",
+        "type": "KSP.Messages.AssemblyActionGroupsChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Resource",
+        "label": "Assembly Mass Changed",
+        "type": "KSP.Messages.AssemblyMassChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Base type of audio cue",
+        "category": "CFXS",
+        "label": "Audio Cue",
+        "type": "KSP.Messages.AudioCueMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The camera context used when being set in auto-mode.",
+        "category": "Camera",
+        "label": "Auto Mode Camera Context",
+        "type": "KSP.Messages.AutoModeCameraContextMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players back to KSC",
+        "category": "Gameplay",
+        "label": "Back To KSC",
+        "type": "KSP.Messages.BackToKSCMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Fires when blueprint mode is enabled by clicking on the view cube in the OAB.",
+        "category": "Camera",
+        "label": "Blueprint Mode Enabled",
+        "type": "KSP.Messages.BlueprintModeEnabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "Calculate All Stages DV For Situation",
+        "type": "KSP.Messages.CalculateAllStagesDVForSituation, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "Calculate Stage DV For Situation",
+        "type": "KSP.Messages.CalculateStageDVForSituation, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Fires when the camera is focused on a part by the user in the OAB.",
+        "category": "Camera",
+        "label": "Camera Focused",
+        "type": "KSP.Messages.CameraFocusedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player switched camera view (flight/map/iva)",
+        "category": "Camera",
+        "label": "Camera Changed",
+        "type": "KSP.Messages.CameraChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The Camera Manager has updated in response to a floating origin reset",
+        "category": "Camera",
+        "label": "Camera Manager Updated Unity Transform",
+        "type": "KSP.Messages.CameraManagerUpdatedUnityTransform, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Camera",
+        "label": "Camera Mode Changed",
+        "type": "KSP.Messages.CameraModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The basic camera rig updates the camera mode.",
+        "category": "Camera",
+        "label": "Camera Mode Key",
+        "type": "KSP.Messages.CameraModeKeyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The player has moved the camera up or down.",
+        "category": "Camera",
+        "label": "Camera Moved Vertically",
+        "type": "KSP.Messages.CameraMovedVerticallyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Camera Orbit Target Changed",
+        "type": "KSP.Messages.CameraOrbitTargetChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player panned the camera",
+        "category": "Camera",
+        "label": "Camera Panned",
+        "type": "KSP.Messages.CameraPannedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The observed PQS planet has changed",
+        "category": "Camera",
+        "label": "Camera PQS Changed",
+        "type": "KSP.Messages.CameraPQSChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player reset camera with input",
+        "category": "Camera",
+        "label": "Camera Reset",
+        "type": "KSP.Messages.CameraResetMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player rotated the camera",
+        "category": "Camera",
+        "label": "Camera Rotated",
+        "type": "KSP.Messages.CameraRotatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player zoomed the camera",
+        "category": "Camera",
+        "label": "Camera Zoomed",
+        "type": "KSP.Messages.CameraZoomedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Can’t manipulate this node because you’re out of fuel.",
+        "category": "General",
+        "label": "Cannot Change Node While Out Of Fuel",
+        "type": "KSP.Messages.CannotChangeNodeWhileOutOfFuelMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Out of fuel, cannot place maneuver node.",
+        "category": "General",
+        "label": "Cannot Place Maneuver Node While Out Of Fuel",
+        "type": "KSP.Messages.CannotPlaceManeuverNodeWhileOutOfFuelMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The observer can now leave the current vessel",
+        "category": "Flight",
+        "label": "Can Observer Leave Active Vessel Value Changed",
+        "type": "KSP.Messages.CanObserverLeaveActiveVesselValueChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Celestial Body",
+        "label": "Celestial Bodies Loaded",
+        "type": "KSP.Messages.CelestialBodiesLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Fires when the context menu is opened on a planet.",
+        "category": "Celestial Body",
+        "label": "Celestial Body Context Opened",
+        "type": "KSP.Messages.CelestialBodyContextOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Celestial Body",
+        "label": "Celestial Body Data Added",
+        "type": "KSP.Messages.CelestialBodyDataAddedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Celestial Body",
+        "label": "Celestial Body Data Removed",
+        "type": "KSP.Messages.CelestialBodyDataRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has discovered a celestial body",
+        "category": "Celestial Body",
+        "label": "Celestial Body Discovered",
+        "type": "KSP.Messages.CelestialBodyDiscoveredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The OAB center of pressure button has been toggled on",
+        "category": "OAB",
+        "label": "Center Of Pressure Toggled On",
+        "type": "KSP.Messages.CenterOfPressureToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The OAB center of thrust button has been toggled on",
+        "category": "OAB",
+        "label": "Center Of Thrust Toggled On",
+        "type": "KSP.Messages.CenterOfThrustToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has closed the DeltaV Tool Window",
+        "category": "Staging",
+        "label": "Closed Delta V Tool Window",
+        "type": "KSP.Messages.ClosedDeltaVToolWindow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A message to close the DeltaV Tool Window",
+        "category": "Staging",
+        "label": "Close Delta V Tool Window",
+        "type": "KSP.Messages.CloseDeltaVToolWindow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The close button on the Engineers Report UI is clicked",
+        "category": "OAB",
+        "label": "Close Engineers Report Window",
+        "type": "KSP.Messages.CloseEngineersReportWindowMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Colony",
+        "label": "Colony Control Changed",
+        "type": "KSP.Messages.ColonyControlChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Colony",
+        "label": "Colony Data Updated",
+        "type": "KSP.Messages.ColonyDataUpdatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has deployed a colony",
+        "category": "Colony",
+        "label": "Colony Deployed",
+        "type": "KSP.Messages.ColonyDeployedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has established a colony",
+        "category": "Colony",
+        "label": "Colony Established",
+        "type": "KSP.Messages.ColonyEstablishedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Colony Founded",
+        "type": "KSP.Messages.ColonyFoundedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The command status has changed",
+        "category": "Part Module",
+        "label": "Command Status Changed",
+        "type": "KSP.Messages.CommandStatusChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Part Component",
+        "label": "Control Point Changed",
+        "type": "KSP.Messages.ControlPointChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players control the current selected vessel",
+        "category": "Gameplay",
+        "label": "Control Selected Vessel",
+        "type": "KSP.Messages.ControlSelectedVesselMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A control surface has been added",
+        "category": "OAB",
+        "label": "Control Surface Added",
+        "type": "KSP.Messages.ControlSurfaceAdded, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A control surface has been deleted",
+        "category": "OAB",
+        "label": "Control Surface Deleted",
+        "type": "KSP.Messages.ControlSurfaceDeleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The user entered the credit screen",
+        "category": "Gameplay",
+        "label": "Credit Screen Entered",
+        "type": "KSP.Messages.CreditScreenEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The user exited the credit screen",
+        "category": "Gameplay",
+        "label": "Credit Screen Exited",
+        "type": "KSP.Messages.CreditScreenExitedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Error message that should get displayed from the log console window.",
+        "category": "Gameplay",
+        "label": "Debug Notification",
+        "type": "KSP.Messages.DebugNotificationMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has triggered a decoupler on a vehicle",
+        "category": "Part Module",
+        "label": "Decouple",
+        "type": "KSP.Messages.DecoupleMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has completed a delivery route",
+        "category": "Flight",
+        "label": "Delivery Route Completed",
+        "type": "KSP.Messages.DeliveryRouteCompletedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has established a delivery route",
+        "category": "Flight",
+        "label": "Delivery Route Established",
+        "type": "KSP.Messages.DeliveryRouteEstablishedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The DeltaV Tool window has been opened",
+        "category": "OAB",
+        "label": "Delta V Tool Opened",
+        "type": "KSP.Messages.DeltaVToolOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed DeltaV Tool's stage focus or updated DeltaVSituation",
+        "category": "Staging",
+        "label": "Delta V Tool Stage Change",
+        "type": "KSP.Messages.DeltaVToolStageChangeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Deployable Action Availability Changed",
+        "type": "KSP.Messages.DeployableActionAvailabilityChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Deployable part status changed",
+        "category": "Part Module",
+        "label": "Deployable Part Status Changed",
+        "type": "KSP.Messages.DeployablePartStatusChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The active vessel crashed on a CB.",
+        "category": "Mission",
+        "label": "Destroyed By Celestial Body Collision",
+        "type": "KSP.Messages.DestroyedByCelestialBodyCollision, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Difficulty Option States Changed",
+        "type": "KSP.Messages.DifficultyOptionStatesChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Discoverable",
+        "type": "KSP.Messages.DiscoverableMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Discoverable Property",
+        "type": "KSP.Messages.DiscoverableProperty, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Game is changing scene or returing to main menu, all notifications must be dismissed",
+        "category": "Gameplay",
+        "label": "Dismiss All Notifications",
+        "type": "KSP.Messages.DismissAllNotificationsMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "End Tutorial",
+        "type": "KSP.Messages.EndTutorial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Activation Changed",
+        "type": "KSP.Messages.EngineActivationChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Flameout Changed",
+        "type": "KSP.Messages.EngineFlameoutChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Engine FX Visibility State Changed",
+        "type": "KSP.Messages.EngineFXVisibilityStateChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Part Module",
+        "label": "Engine Gimbal Activation",
+        "type": "KSP.Messages.EngineGimbalActivationMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Changed Mode",
+        "type": "KSP.Messages.EngineChangedModeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "RAPIER in air breathing mode, change mode to plan maneuver.",
+        "category": "General",
+        "label": "Engine In Air Breathing Mode",
+        "type": "KSP.Messages.EngineInAirBreathingModeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Mode Enter",
+        "type": "KSP.Messages.EngineModeEnterMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Mode Exit",
+        "type": "KSP.Messages.EngineModeExitMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB Part",
+        "label": "Engine OAB Thrust Percentage Changed",
+        "type": "KSP.Messages.EngineOABThrustPercentageChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's active stage engine is out of fuel",
+        "category": "Staging",
+        "label": "Engine Out Of Fuel",
+        "type": "KSP.Messages.EngineOutOfFuelMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Engine Module",
+        "label": "Engine Shutdown",
+        "type": "KSP.Messages.EngineShutdownMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has closed the escape menu",
+        "category": "Gameplay",
+        "label": "Escape Menu Closed",
+        "type": "KSP.Messages.EscapeMenuClosedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has opened the escape menu",
+        "category": "Gameplay",
+        "label": "Escape Menu Opened",
+        "type": "KSP.Messages.EscapeMenuOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Kerbal has completed an EVA action",
+        "category": "EVA",
+        "label": "EVA Action Completed",
+        "type": "KSP.Messages.EVAActionCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has initiated an EVA action of a Kerbal",
+        "category": "EVA",
+        "label": "EVA Action Initiated",
+        "type": "KSP.Messages.EVAActionInitiated, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered EVA",
+        "category": "EVA",
+        "label": "EVA Entered",
+        "type": "KSP.Messages.EVAEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has left EVA and back into ship",
+        "category": "EVA",
+        "label": "EVA Left",
+        "type": "KSP.Messages.EVALeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Explosion FX Visibility State Changed",
+        "type": "KSP.Messages.ExplosionFXVisibilityStateChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has placed the first half of a compound part (fuel lines, struts, etc.)",
+        "category": "OAB",
+        "label": "First Half Compound Part Placed",
+        "type": "KSP.Messages.FirstHalfCompoundPartPlacedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has placed the first part)",
+        "category": "OAB",
+        "label": "First Part Placed",
+        "type": "KSP.Messages.FirstPartPlacedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has planted a flag",
+        "category": "EVA",
+        "label": "Flag Planted",
+        "type": "KSP.Messages.FlagPlantedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The flight controls have been set to docking",
+        "category": "Flight",
+        "label": "Flight Controls Docking",
+        "type": "KSP.Messages.FlightControlsDockingMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The flight controls have been set to normal",
+        "category": "Flight",
+        "label": "Flight Controls Normal",
+        "type": "KSP.Messages.FlightControlsNormalMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered the flight view state",
+        "category": "General",
+        "label": "Flight View Entered",
+        "type": "KSP.Messages.FlightViewEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has left the flight view state",
+        "category": "General",
+        "label": "Flight View Left",
+        "type": "KSP.Messages.FlightViewLeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The physics floating origin has been reset",
+        "category": "Flight",
+        "label": "Floating Origin Snapped",
+        "type": "KSP.Messages.FloatingOriginSnappedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Timewarp rate is too high, force decrease is required.",
+        "category": "General",
+        "label": "Force Decrease Timewarp",
+        "type": "KSP.Messages.ForceDecreaseTimewarpMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "FTUE Toggled",
+        "type": "KSP.Messages.FTUEToggled, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Game Event",
+        "type": "KSP.Messages.GameEventMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players changed language",
+        "category": "Gameplay",
+        "label": "Game Language Changed",
+        "type": "KSP.Messages.GameLanguageChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Event fired when the game loading sequence has finished",
+        "category": "General",
+        "label": "Game Load Finished",
+        "type": "KSP.Messages.GameLoadFinishedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Game pause is toggled on/off.",
+        "category": "General",
+        "label": "Game Pause Toggled",
+        "type": "KSP.Messages.GamePauseToggledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered a game state",
+        "category": "General",
+        "label": "Game State Entered",
+        "type": "KSP.Messages.GameStateEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed game states",
+        "category": "General",
+        "label": "Game State Changed",
+        "type": "KSP.Messages.GameStateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has left a game state",
+        "category": "General",
+        "label": "Game State Left",
+        "type": "KSP.Messages.GameStateLeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Generate Test Json",
+        "type": "KSP.Messages.GenerateTestJson, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Generic Test Event",
+        "type": "KSP.Messages.GenericTestEvent, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "On go button pressed",
+        "category": "Flight",
+        "label": "Go Button Pressed",
+        "type": "KSP.Messages.GoButtonPressedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has advanced to the next tutorial step by pressing the continue button in the Tutorial Message Box",
+        "category": "Mission",
+        "label": "Go To Next Tutorial Step",
+        "type": "KSP.Messages.GoToNextTutorialStep, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Ground Distance Traveled Record",
+        "type": "KSP.Messages.GroundDistanceTraveledRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Highest Altitude Record",
+        "type": "KSP.Messages.HighestAltitudeRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Highest G Force Record",
+        "type": "KSP.Messages.HighestGForceRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Highest Speed Over Land Record",
+        "type": "KSP.Messages.HighestSpeedOverLandRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Highest Speed Record",
+        "type": "KSP.Messages.HighestSpeedRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has achieved an intercept while planning a maneuver",
+        "category": "Maneuver",
+        "label": "Intercept Achieved",
+        "type": "KSP.Messages.InterceptAchievedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Kerbal",
+        "label": "Kerbal Added To Roster",
+        "type": "KSP.Messages.KerbalAddedToRoster, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Kerbal Completely Built",
+        "type": "KSP.Messages.KerbalCompletelyBuiltMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Kerbal",
+        "label": "Kerbal Location Changed",
+        "type": "KSP.Messages.KerbalLocationChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Kerbal",
+        "label": "Kerbal Portrait Finished",
+        "type": "KSP.Messages.KerbalPortraitFinished, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Kerbal Lost",
+        "category": "Kerbal",
+        "label": "Kerbal Removed From Roster",
+        "type": "KSP.Messages.KerbalRemovedFromRoster, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Kerbal",
+        "label": "Kerbal Removing From Roster",
+        "type": "KSP.Messages.KerbalRemovingFromRoster, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Kerbal Rig Load Complete",
+        "type": "KSP.Messages.KerbalRigLoadComplete, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered Kerbal Space Center",
+        "category": "General",
+        "label": "KSC Loaded",
+        "type": "KSP.Messages.KSCLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has launch a vehicle from VAB",
+        "category": "General",
+        "label": "Launch From VAB",
+        "type": "KSP.Messages.LaunchFromVABMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players pointer entered the launchpad",
+        "category": "Gameplay",
+        "label": "Launchpad Pointer Enter",
+        "type": "KSP.Messages.LaunchpadPointerEnterMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players pointer exited the launchpad",
+        "category": "Gameplay",
+        "label": "Launchpad Pointer Exit",
+        "type": "KSP.Messages.LaunchpadPointerExitMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players selected the launchpad",
+        "category": "Gameplay",
+        "label": "Launchpad Selected",
+        "type": "KSP.Messages.LaunchpadSelectedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Launch sequence complete",
+        "category": "Flight",
+        "label": "Launch Sequence Complete",
+        "type": "KSP.Messages.LaunchSequenceCompleteMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Launch sequence initiated",
+        "category": "Flight",
+        "label": "Launch Sequence Initiated",
+        "type": "KSP.Messages.LaunchSequenceInitiatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Message sent when the Lesson Menu UI is CLOSED within the Training Center",
+        "category": "Mission",
+        "label": "Lesson Menu UI Closed",
+        "type": "KSP.Messages.LessonMenuUIClosed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Message sent when the Lesson Menu UI is OPENED within the Training Center",
+        "category": "Mission",
+        "label": "Lesson Menu UI Opened",
+        "type": "KSP.Messages.LessonMenuUIOpened, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A new Manuever node has been Created and Initialized",
+        "category": "General",
+        "label": "Maneuver Created",
+        "type": "KSP.Messages.ManeuverCreatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has completed a manuever",
+        "category": "Maneuver",
+        "label": "Maneuver Finished",
+        "type": "KSP.Messages.ManeuverFinishedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Maneuver Gizmo State Change",
+        "type": "KSP.Messages.ManeuverGizmoStateChange, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player selected an existing Manuever Node.",
+        "category": "Maneuver",
+        "label": "Maneuver Node Clicked",
+        "type": "KSP.Messages.ManeuverNodeClickedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Perfect Burn time is right now",
+        "category": "Maneuver",
+        "label": "Maneuver Perfect Burn Timed",
+        "type": "KSP.Messages.ManeuverPerfectBurnTimedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has removed a manuever node",
+        "category": "Maneuver",
+        "label": "Maneuver Removed",
+        "type": "KSP.Messages.ManeuverRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Maneuver Request Orbit Node Highlight",
+        "type": "KSP.Messages.ManeuverRequestOrbitNodeHighlightMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Celestial Body Added",
+        "type": "KSP.Messages.MapCelestialBodyAddedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Celestial Body Removed",
+        "type": "KSP.Messages.MapCelestialBodyRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Dismiss Orbit Node Highlight",
+        "type": "KSP.Messages.MapDismissOrbitNodeHighlightMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Focus Changed",
+        "type": "KSP.Messages.MapFocusChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has initialized the map view",
+        "category": "General",
+        "label": "Map Initialized",
+        "type": "KSP.Messages.MapInitializedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Mode Changed",
+        "type": "KSP.Messages.MapModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Orbit Added",
+        "type": "KSP.Messages.MapOrbitAddedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Orbit Removed",
+        "type": "KSP.Messages.MapOrbitRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Remove Tooltip",
+        "type": "KSP.Messages.MapRemoveTooltipMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Request Focus",
+        "type": "KSP.Messages.MapRequestFocusMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Request Selection",
+        "type": "KSP.Messages.MapRequestSelectionMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Request Tooltip",
+        "type": "KSP.Messages.MapRequestTooltipMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has initialized the closing of the map view",
+        "category": "General",
+        "label": "Map Shutdown",
+        "type": "KSP.Messages.MapShutdownMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Map Space Provider Has Updated",
+        "type": "KSP.Messages.MapSpaceProviderHasUpdated, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered the map view state",
+        "category": "General",
+        "label": "Map View Entered",
+        "type": "KSP.Messages.MapViewEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has left the map view state",
+        "category": "General",
+        "label": "Map View Left",
+        "type": "KSP.Messages.MapViewLeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Center",
+        "type": "KSP.Messages.MessageCenter, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Mission Completed & Award(s) Granted (if applicable).",
+        "category": "Mission",
+        "label": "Mission Complete",
+        "type": "KSP.Messages.MissionCompleteMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered Mission Control",
+        "category": "General",
+        "label": "Mission Control Loaded",
+        "type": "KSP.Messages.MissionControlLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Mission Elapsed Time Record",
+        "type": "KSP.Messages.MissionElapsedTimeRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A Mission stage has been completed.",
+        "category": "Mission",
+        "label": "Mission Stage Completed",
+        "type": "KSP.Messages.MissionStageCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Mission Status Dump",
+        "type": "KSP.Messages.MissionStatusDump, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The player has dismissed the mission summary dialog.",
+        "category": "Mission",
+        "label": "Mission Summary Dismissed",
+        "type": "KSP.Messages.MissionSummaryDismissedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Mission UI Toggle",
+        "type": "KSP.Messages.MissionUIToggle, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mod",
+        "label": "Mod Manager Dialog Toggle",
+        "type": "KSP.Messages.ModManagerDialogToggle, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has activated a monument",
+        "category": "Flight",
+        "label": "Monument Activated",
+        "type": "KSP.Messages.MonumentActivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has discovered a monument",
+        "category": "Flight",
+        "label": "Monument Discovered",
+        "type": "KSP.Messages.MonumentDiscoveredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player activates the mouse look.",
+        "category": "Camera",
+        "label": "Mouse Look Activated",
+        "type": "KSP.Messages.MouseLookActivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player deactivates the mouse look.",
+        "category": "Camera",
+        "label": "Mouse Look Deactivated",
+        "type": "KSP.Messages.MouseLookDeactivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has passed to a new construction step of a multi-step construction part (e.g. fairings)",
+        "category": "OAB Part",
+        "label": "Multi Step Part New Step",
+        "type": "KSP.Messages.MultiStepPartNewStepMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "Mute Music Changed",
+        "type": "KSP.Messages.MuteMusicChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "Mute Sound Changed",
+        "type": "KSP.Messages.MuteSoundChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Antinormal",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Antinormal",
+        "type": "KSP.Messages.NavballAlignedAntinormalMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Manuever",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Maneuver",
+        "type": "KSP.Messages.NavballAlignedManeuverMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to the navball highlight(mission destination)",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Marker",
+        "type": "KSP.Messages.NavballAlignedMarkerMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Normal",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Normal",
+        "type": "KSP.Messages.NavballAlignedNormalMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Prograde",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Prograde",
+        "type": "KSP.Messages.NavballAlignedProgradeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Radial In",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Radial In",
+        "type": "KSP.Messages.NavballAlignedRadialInMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Radial Out",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Radial Out",
+        "type": "KSP.Messages.NavballAlignedRadialOutMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Retrograde",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Retrograde",
+        "type": "KSP.Messages.NavballAlignedRetrogradeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's navball has aligned to Target",
+        "category": "Flight HUD",
+        "label": "Navball Aligned Target",
+        "type": "KSP.Messages.NavballAlignedTargetMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "New Mission Available.",
+        "category": "Mission",
+        "label": "New Mission Available",
+        "type": "KSP.Messages.NewMissionAvailableMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "New Tutorial Available",
+        "type": "KSP.Messages.NewTutorialAvailableMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A non active vessel has been destroyed",
+        "category": "Flight",
+        "label": "Non Active Vessel Destroyed",
+        "type": "KSP.Messages.NonActiveVesselDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Inactive vessel is near maneuver node",
+        "category": "General",
+        "label": "Non Active Vessel Near Maneuver",
+        "type": "KSP.Messages.NonActiveVesselNearManeuverMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Inactive Vessel's trajectory is on collision course",
+        "category": "Vessel",
+        "label": "Non Active Vessel On Crash Trajectory",
+        "type": "KSP.Messages.NonActiveVesselOnCrashTrajectoryMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The OAB alignment mode interface has been toggled on",
+        "category": "OAB",
+        "label": "OAB Alignment Mode Interface Toggled On",
+        "type": "KSP.Messages.OABAlignmentModeInterfaceToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "OAB category has been selected from parts picker",
+        "category": "OAB",
+        "label": "OAB Category Selected",
+        "type": "KSP.Messages.OABCategorySelected, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has attempted to select new anchor on an invalid part.",
+        "category": "OAB",
+        "label": "OAB Invalid Part Anchor",
+        "type": "KSP.Messages.OABInvalidPartAnchorMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has attempted to perform an attachment to an invalid attach node.",
+        "category": "OAB",
+        "label": "OAB Invalid Symmetry Attach",
+        "type": "KSP.Messages.OABInvalidSymmetryAttachMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "OAB Loaded",
+        "type": "KSP.Messages.OABLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Done after EndOfInitializationFrame, which takes into account automated loading prcesses or snapshot application",
+        "category": "OAB",
+        "label": "OAB Load Finalized",
+        "type": "KSP.Messages.OABLoadFinalizedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The main assembly changed for any reason",
+        "category": "OAB",
+        "label": "OAB Main Assembly Changed",
+        "type": "KSP.Messages.OABMainAssemblyChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has created new assembly",
+        "category": "OAB",
+        "label": "OAB New Assembly",
+        "type": "KSP.Messages.OABNewAssemblyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has attempted to paste something that doesn't work or can't deserialize.",
+        "category": "OAB",
+        "label": "OAB Paste Error",
+        "type": "KSP.Messages.OABPasteErrorMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "OAB has finished loading workspace from disk",
+        "category": "OAB",
+        "label": "OAB Pre Workspace Loaded From File",
+        "type": "KSP.Messages.OABPreWorkspaceLoadedFromFileMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vab subassembly category selected",
+        "category": "OAB",
+        "label": "OAB Subassembly Category Selected",
+        "type": "KSP.Messages.OABSubassemblyCategorySelected, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "OAB Take History Snapshot",
+        "type": "KSP.Messages.OABTakeHistorySnapshot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "OAB Unloaded",
+        "type": "KSP.Messages.OABUnloadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "OAB needs to display a message to the user",
+        "category": "OAB",
+        "label": "OAB User",
+        "type": "KSP.Messages.OABUserMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The OAB center of mass button has been toggled on",
+        "category": "OAB",
+        "label": "OA Center Of Mass Toggled On",
+        "type": "KSP.Messages.OACenterOfMassToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The observer cannot leave the current vessel",
+        "category": "Flight",
+        "label": "Observer Cannot Leave Active Vessel",
+        "type": "KSP.Messages.ObserverCannotLeaveActiveVesselMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The observer has changed SOI",
+        "category": "Flight",
+        "label": "Observer SOI Changed",
+        "type": "KSP.Messages.ObserverSOIChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "On Mission Stage Completed",
+        "type": "KSP.Messages.OnMissionStageCompleted, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "On Mission Tracking Toggled",
+        "type": "KSP.Messages.OnMissionTrackingToggled, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "On Mission Triumph Dismissed",
+        "type": "KSP.Messages.OnMissionTriumphDismissed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Open the Engineers Report window.",
+        "category": "OAB",
+        "label": "Open Engineers Report Window",
+        "type": "KSP.Messages.OpenEngineersReportWindowMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player selected a location on an orbit",
+        "category": "General",
+        "label": "Orbit Clicked",
+        "type": "KSP.Messages.OrbitClickedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A resource ran out",
+        "category": "Part Module",
+        "label": "Out Of Resource",
+        "type": "KSP.Messages.OutOfResourceMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A Deployed Parachute has been cut from the vessel",
+        "category": "Part Module",
+        "label": "Parachute Cut",
+        "type": "KSP.Messages.ParachuteCutMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A Parachute has fully deployed",
+        "category": "Part Module",
+        "label": "Parachute Deployed",
+        "type": "KSP.Messages.ParachuteDeployedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A Deployed Parachute has been repackaged for future deployment",
+        "category": "Part Module",
+        "label": "Parachute Re Packed",
+        "type": "KSP.Messages.ParachuteRePackedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A Parachute has partially deployed",
+        "category": "Part Module",
+        "label": "Parachute Semi Deployed",
+        "type": "KSP.Messages.ParachuteSemiDeployedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has activated a part action group",
+        "category": "Flight",
+        "label": "Part Action Group Activated",
+        "type": "KSP.Messages.PartActionGroupActivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A part in the OAB is added to favorites by a user with something like middle mouse click",
+        "category": "OAB",
+        "label": "Part Added To Favorites",
+        "type": "KSP.Messages.PartAddedToFavorites, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Part Behaviour Destroyed",
+        "type": "KSP.Messages.PartBehaviourDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Part Behaviour Initialized",
+        "type": "KSP.Messages.PartBehaviourInitializedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Collided",
+        "type": "KSP.Messages.PartCollidedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Component Destroyed",
+        "type": "KSP.Messages.PartComponentDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Crashed",
+        "type": "KSP.Messages.PartCrashedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has deleted a part",
+        "category": "OAB Part",
+        "label": "Part Deleted",
+        "type": "KSP.Messages.PartDeletedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Destroyed By Explosion",
+        "type": "KSP.Messages.PartDestroyedByExplosionMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vehicle part was destroyed due to overheating",
+        "category": "Flight",
+        "label": "Part Destroyed By Overheat",
+        "type": "KSP.Messages.PartDestroyedByOverheatMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A part was destroyed on a vehicle",
+        "category": "Flight",
+        "label": "Part Destroyed",
+        "type": "KSP.Messages.PartDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A part was detached from the main vehicle assembly",
+        "category": "Flight",
+        "label": "Part Detached",
+        "type": "KSP.Messages.PartDetachedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Part Exploded",
+        "type": "KSP.Messages.PartExplodedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Part has failed/malfunctioned (IE parachute break)",
+        "category": "Flight",
+        "label": "Part Failure",
+        "type": "KSP.Messages.PartFailureMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Joint Broken",
+        "type": "KSP.Messages.PartJointBroken, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The Part Manager window has been opened",
+        "category": "Flight",
+        "label": "Part Manager Opened",
+        "type": "KSP.Messages.PartManagerOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB Part",
+        "label": "Part Manipulation Completed",
+        "type": "KSP.Messages.PartManipulationCompletedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has triggered a part action",
+        "category": "Part Module",
+        "label": "Part Module Action Activated",
+        "type": "KSP.Messages.PartModuleActionActivated, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Part has been placed in the OAB scene but not on the main assembly",
+        "category": "OAB",
+        "label": "Part Not Placed On Main Assembly",
+        "type": "KSP.Messages.PartNotPlacedOnMainAssemblyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has placed a part",
+        "category": "OAB Part",
+        "label": "Part Placed",
+        "type": "KSP.Messages.PartPlacedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Part placed on main assembly",
+        "category": "OAB",
+        "label": "Part Placed On Main Assembly",
+        "type": "KSP.Messages.PartPlacedOnMainAssemblyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A part in the OAB is removed from favorites by a user with something like middle mouse click",
+        "category": "OAB",
+        "label": "Part Removed From Favorites",
+        "type": "KSP.Messages.PartRemovedFromFavorites, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A part was removed from the main assembly.",
+        "category": "OAB",
+        "label": "Part Removed From Main Assembly",
+        "type": "KSP.Messages.PartRemovedFromMainAssemblyMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has removed a part from the assembly",
+        "category": "OAB Part",
+        "label": "Part Separated",
+        "type": "KSP.Messages.PartSeparatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Part Splashed",
+        "type": "KSP.Messages.PartSplashedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has moved a part from one stage to another",
+        "category": "Staging",
+        "label": "Part Stage Changed",
+        "type": "KSP.Messages.PartStageChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Part Under Mouse Changed",
+        "type": "KSP.Messages.PartUnderMouseChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed the state of Pause to paused or unpaused",
+        "category": "General",
+        "label": "Pause State Changed",
+        "type": "KSP.Messages.PauseStateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Physics Space Ref Frame Changed",
+        "type": "KSP.Messages.PhysicsSpaceRefFrameChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has trigger the Plant Flag action",
+        "category": "EVA",
+        "label": "Plant Flag",
+        "type": "KSP.Messages.PlantFlagMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has linked an account",
+        "category": "Authentication",
+        "label": "Player Linked Account",
+        "type": "KSP.Messages.PlayerLinkedAccountMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has logged in",
+        "category": "Authentication",
+        "label": "Player Logged In",
+        "type": "KSP.Messages.PlayerLoggedInMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has created an account",
+        "category": "Authentication",
+        "label": "Player Registered",
+        "type": "KSP.Messages.PlayerRegisteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Launch sequence initiated",
+        "category": "Flight",
+        "label": "Prelaunch Sequence Initiated",
+        "type": "KSP.Messages.PrelaunchSequenceInitiatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The surface span of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Control Surface Span Decreased",
+        "type": "KSP.Messages.ProceduralControlSurfaceSpanDecreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The surface span of a procedural wing has been increased",
+        "category": "OAB",
+        "label": "Procedural Control Surface Span Increased",
+        "type": "KSP.Messages.ProceduralControlSurfaceSpanIncreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Procedural Part",
+        "label": "Procedural Part Mesh Baked",
+        "type": "KSP.Messages.ProceduralPartMeshBakedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing constrol surface length decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Control Surface Length Decreased",
+        "type": "KSP.Messages.ProceduralWingControlSurfaceLengthDecreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing constrol surface length increased",
+        "category": "OAB",
+        "label": "Procedural Wing Control Surface Length Increased",
+        "type": "KSP.Messages.ProceduralWingControlSurfaceLengthIncreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing constrol surface position decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Control Surface Position Decreased",
+        "type": "KSP.Messages.ProceduralWingControlSurfacePositionDecreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing constrol surface position increased",
+        "category": "OAB",
+        "label": "Procedural Wing Control Surface Position Increased",
+        "type": "KSP.Messages.ProceduralWingControlSurfacePositionIncreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The angle of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Angle",
+        "type": "KSP.Messages.ProceduralWingDecreasedAngleMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The length of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Root Length",
+        "type": "KSP.Messages.ProceduralWingDecreasedRootLengthMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The thickness of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Root Thickness",
+        "type": "KSP.Messages.ProceduralWingDecreasedRootThicknessMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing sweep angle has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Tip Angle",
+        "type": "KSP.Messages.ProceduralWingDecreasedTipAngleMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing end chord length has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Tip Length",
+        "type": "KSP.Messages.ProceduralWingDecreasedTipLengthMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wwing tip thickness has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Tip Thickness",
+        "type": "KSP.Messages.ProceduralWingDecreasedTipThicknessMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The width of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Decreased Wing Span",
+        "type": "KSP.Messages.ProceduralWingDecreasedWingSpanMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing end to in out angle has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing End Toe In Out Angle Decreased",
+        "type": "KSP.Messages.ProceduralWingEndToeInOutAngleDecreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing end to in out angle has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing End Toe In Out Angle Increased",
+        "type": "KSP.Messages.ProceduralWingEndToeInOutAngleIncreasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The angle of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Angle",
+        "type": "KSP.Messages.ProceduralWingIncreasedAngleMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The length of a procedural wing has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Root Length",
+        "type": "KSP.Messages.ProceduralWingIncreasedRootLengthMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The thickness of a procedural wing has been decreased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Root Thickness",
+        "type": "KSP.Messages.ProceduralWingIncreasedRootThicknessMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing sweep angle has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Tip Angle",
+        "type": "KSP.Messages.ProceduralWingIncreasedTipAngleMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing end chord length has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Tip Length",
+        "type": "KSP.Messages.ProceduralWingIncreasedTipLengthMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing tip thickness has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Tip Thickness",
+        "type": "KSP.Messages.ProceduralWingIncreasedTipThicknessMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The width of a procedural wing has been increased",
+        "category": "OAB",
+        "label": "Procedural Wing Increased Wing Span",
+        "type": "KSP.Messages.ProceduralWingIncreasedWingSpanMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The procedural wing interface has been turned off",
+        "category": "OAB",
+        "label": "Procedural Wing Interface Toggled Off",
+        "type": "KSP.Messages.ProceduralWingInterfaceToggledOffMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The procedural wing interface has been turned on",
+        "category": "OAB",
+        "label": "Procedural Wing Interface Toggled On",
+        "type": "KSP.Messages.ProceduralWingInterfaceToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing leading edge has been disabled",
+        "category": "OAB",
+        "label": "Procedural Wing Leading Edge Disabled",
+        "type": "KSP.Messages.ProceduralWingLeadingEdgeDisabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing leading edge has been enabled",
+        "category": "OAB",
+        "label": "Procedural Wing Leading Edge Enabled",
+        "type": "KSP.Messages.ProceduralWingLeadingEdgeEnabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing trailing edge has been disabled",
+        "category": "OAB",
+        "label": "Procedural Wing Trailing Edge Disabled",
+        "type": "KSP.Messages.ProceduralWingTrailingEdgeDisabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The wing trailing edge has been enabled",
+        "category": "OAB",
+        "label": "Procedural Wing Trailing Edge Enabled",
+        "type": "KSP.Messages.ProceduralWingTrailingEdgeEnabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Data Contract",
+        "type": "KSP.Messages.DataContract, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Proximity Trigger",
+        "type": "KSP.Messages.ProximityTriggerMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The user has selected to quit and head to the MainMenu",
+        "category": "Gameplay",
+        "label": "Quit To Main Menu Started",
+        "type": "KSP.Messages.QuitToMainMenuStartedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has toggled RCS mode on or off",
+        "category": "Controls",
+        "label": "RCS Mode Changed",
+        "type": "KSP.Messages.RCSModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Reentry Effect Begin",
+        "type": "KSP.Messages.ReentryEffectBeginMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Reentry Effect End",
+        "type": "KSP.Messages.ReentryEffectEndMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Used in FTUE for initial access of R&D Center UI",
+        "category": "General",
+        "label": "Research And Development Loaded",
+        "type": "KSP.Messages.ResearchAndDevelopmentLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has generated a research report",
+        "category": "Science",
+        "label": "Research Collected",
+        "type": "KSP.Messages.ResearchCollectedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The active vessel has visited the provided research location.",
+        "category": "General",
+        "label": "Research Location Visited",
+        "type": "KSP.Messages.ResearchLocationVisitedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has opened the Research menu",
+        "category": "Science",
+        "label": "Research Menu Opened",
+        "type": "KSP.Messages.ResearchMenuOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has acquired a research report",
+        "category": "Science",
+        "label": "Research Report Acquired",
+        "type": "KSP.Messages.ResearchReportAcquiredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has scored a research report",
+        "category": "Science",
+        "label": "Research Report Scored",
+        "type": "KSP.Messages.ResearchReportScoredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The research report has been stored on any vessel.",
+        "category": "Science",
+        "label": "Research Report Stored",
+        "type": "KSP.Messages.ResearchReportStoredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has transferred a research report",
+        "category": "Science",
+        "label": "Research Report Transferred",
+        "type": "KSP.Messages.ResearchReportTransferredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Reset Tutorial",
+        "type": "KSP.Messages.ResetTutorial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "When a containers resources change",
+        "category": "Resource",
+        "label": "Resource Container Changed",
+        "type": "KSP.Messages.ResourceContainerChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Resource",
+        "label": "Resource Flow Graph Rebuilt",
+        "type": "KSP.Messages.ResourceFlowGraphRebuiltMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has obtained a resource",
+        "category": "Resource",
+        "label": "Resource Obtained",
+        "type": "KSP.Messages.ResourceObtainedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has reverted a vehicle to a launch location",
+        "category": "General",
+        "label": "Revert To Launch",
+        "type": "KSP.Messages.RevertToLaunchMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The player has disabled SAS",
+        "category": "Flight",
+        "label": "SAS Disabled",
+        "type": "KSP.Messages.SASDisabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The player has enabled SAS",
+        "category": "Flight",
+        "label": "SAS Enabled",
+        "type": "KSP.Messages.SASEnabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed their SAS Mode (prograde, retrograde, etc.)",
+        "category": "Controls",
+        "label": "SAS Mode Changed",
+        "type": "KSP.Messages.SASModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Science",
+        "label": "Science Earned On Recovery",
+        "type": "KSP.Messages.ScienceEarnedOnRecoveryMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Science Experiment State Changed",
+        "type": "KSP.Messages.ScienceExperimentStateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Science Point Capacity Update",
+        "type": "KSP.Messages.SciencePointCapacityUpdateMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has taken a screenshot",
+        "category": "Gameplay",
+        "label": "Screenshot Taken",
+        "type": "KSP.Messages.ScreenshotTakenMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has placed the second half of a compound part (fuel lines, struts, etc.)",
+        "category": "OAB",
+        "label": "Secondt Half Compound Part Placed",
+        "type": "KSP.Messages.SecondtHalfCompoundPartPlacedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Set Celestial Body Destination Position",
+        "type": "KSP.Messages.SetCelestialBodyDestinationPosition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Error message that should get displayed from the log console window.",
+        "category": "Gameplay",
+        "label": "Should Display Error",
+        "type": "KSP.Messages.ShouldDisplayErrorMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Simulation Model And View Bound",
+        "type": "KSP.Messages.SimulationModelAndViewBoundMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Simulation Object View Created",
+        "type": "KSP.Messages.SimulationObjectViewCreatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered a Sphere of Influence",
+        "category": "Flight",
+        "label": "SOI Entered",
+        "type": "KSP.Messages.SOIEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has exited a Sphere of Influence",
+        "category": "Flight",
+        "label": "SOI Exited",
+        "type": "KSP.Messages.SOIExitedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicles' trajectory intersects with another Sphere of Influence",
+        "category": "Flight",
+        "label": "SOI Change Predicted",
+        "type": "KSP.Messages.SOIChangePredictedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Solar panels fully deployed.",
+        "category": "Part Component",
+        "label": "Solar Panels Deployed",
+        "type": "KSP.Messages.SolarPanelsDeployedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Solar panels fully deployed but ineffective.",
+        "category": "Part Component",
+        "label": "Solar Panels Ineffective",
+        "type": "KSP.Messages.SolarPanelsIneffectiveMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Called to spawn the triumph window related to the mission being submitted",
+        "category": "Mission",
+        "label": "Spawn Triumph Window",
+        "type": "KSP.Messages.SpawnTriumphWindow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has created a stable orbit",
+        "category": "Flight",
+        "label": "Stable Orbit Created",
+        "type": "KSP.Messages.StableOrbitCreatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has activated a stage",
+        "category": "Staging",
+        "label": "Stage Activated",
+        "type": "KSP.Messages.StageActivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has added a stage to a vehicle",
+        "category": "Staging",
+        "label": "Stage Added",
+        "type": "KSP.Messages.StageAddedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has removed a stage from a vehicle",
+        "category": "Staging",
+        "label": "Stage Removed",
+        "type": "KSP.Messages.StageRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Start Game Shutdown",
+        "type": "KSP.Messages.StartGameShutdownMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Start Tutorial",
+        "type": "KSP.Messages.StartTutorial, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A state in the simple state machine has been entered",
+        "category": "General",
+        "label": "State Entered",
+        "type": "KSP.Messages.StateEnteredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A state in the simple state machine has been changed",
+        "category": "General",
+        "label": "State Changed",
+        "type": "KSP.Messages.StateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A state in the simple state machine has been left",
+        "category": "General",
+        "label": "State Left",
+        "type": "KSP.Messages.StateLeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Stop/End of FX requested by sequence",
+        "category": "CFXS",
+        "label": "Stop FX",
+        "type": "KSP.Messages.StopFXMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has loaded a subassembly",
+        "category": "OAB",
+        "label": "Subassembly Loaded",
+        "type": "KSP.Messages.SubassemblyLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "Subtitle Size Changed",
+        "type": "KSP.Messages.SubtitleSizeChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The OAB symmetry mode interface has been toggled on",
+        "category": "OAB",
+        "label": "Symmetry Mode Interface Toggled On",
+        "type": "KSP.Messages.SymmetryModeInterfaceToggledOnMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "Symmetry Placement Failed",
+        "type": "KSP.Messages.SymmetryPlacementFailed, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has set a target",
+        "category": "Flight",
+        "label": "Target Set",
+        "type": "KSP.Messages.TargetSetMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has unlocked a technology",
+        "category": "Science",
+        "label": "Tech Researched",
+        "type": "KSP.Messages.TechResearchedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The player has unlocked a tech in R&D, unlocking a new tier.",
+        "category": "Science",
+        "label": "Tech Tier Unlocked",
+        "type": "KSP.Messages.TechTierUnlockedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Test Fire Decouple Effect",
+        "type": "KSP.Messages.TestFireDecoupleEffectMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Test Fire Fairing Effect",
+        "type": "KSP.Messages.TestFireFairingEffectMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Test Fire Launch Clamp Effect",
+        "type": "KSP.Messages.TestFireLaunchClampEffectMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Test Fire Parachute Effect",
+        "type": "KSP.Messages.TestFireParachuteEffectMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "Text Auto Continue Changed",
+        "type": "KSP.Messages.TextAutoContinueChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Settings",
+        "label": "Text Speed Changed",
+        "type": "KSP.Messages.TextSpeedChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed their Throttle",
+        "category": "Controls",
+        "label": "Throttle Changed",
+        "type": "KSP.Messages.ThrottleChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Timewarp cannot increase due to altitude limits.",
+        "category": "General",
+        "label": "Timewarp Cant Increase Due To Altitude",
+        "type": "KSP.Messages.TimewarpCantIncreaseDueToAltitudeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player is approaching the end of the burn and decreasing time warp.",
+        "category": "General",
+        "label": "Timewarp Decreasing Approaching Orbital Event",
+        "type": "KSP.Messages.TimewarpDecreasingApproachingOrbitalEventMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has completed a Time Warp to a Location on an orbit",
+        "category": "General",
+        "label": "Time Warp To Location Completed",
+        "type": "KSP.Messages.TimeWarpToLocationCompletedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has initialized a Time Warp to a Location on an orbit",
+        "category": "General",
+        "label": "Time Warp To Location Initialized",
+        "type": "KSP.Messages.TimeWarpToLocationInitializedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has triggered a timezoom speed change",
+        "category": "Flight",
+        "label": "Time Zoom Change Activated",
+        "type": "KSP.Messages.TimeZoomChangeActivatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Timezoom speed has reached its new destination",
+        "category": "Flight",
+        "label": "Time Zoom Change Completed",
+        "type": "KSP.Messages.TimeZoomChangeCompletedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Show or hide the colony UI",
+        "category": "Colony",
+        "label": "Toggle Colony Dialog",
+        "type": "KSP.Messages.ToggleColonyDialogMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Record",
+        "label": "Total Distance Traveled Record",
+        "type": "KSP.Messages.TotalDistanceTraveledRecordMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Event fired when the TrackingStation is Loaded and is available for audio",
+        "category": "General",
+        "label": "Tracking Station Loaded Audio Cue",
+        "type": "KSP.Messages.TrackingStationLoadedAudioCueMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Event fired when the TrackingStation is Loaded",
+        "category": "General",
+        "label": "Tracking Station Loaded",
+        "type": "KSP.Messages.TrackingStationLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Event fired when the TrackingStation is Unloaded",
+        "category": "General",
+        "label": "Tracking Station Unloaded",
+        "type": "KSP.Messages.TrackingStationUnloadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has left Training Center",
+        "category": "General",
+        "label": "Training Center Left",
+        "type": "KSP.Messages.TrainingCenterLeftMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has entered Training Center",
+        "category": "General",
+        "label": "Training Center Loaded",
+        "type": "KSP.Messages.TrainingCenterLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has selected to load Training Center, and the game is heading there",
+        "category": "General",
+        "label": "Training Center Loading",
+        "type": "KSP.Messages.TrainingCenterLoadingMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Data Transmitter activated/deactivated",
+        "category": "Part Module",
+        "label": "Transmitter State Changed",
+        "type": "KSP.Messages.TransmitterStateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Travel Log Event Added",
+        "type": "KSP.Messages.TravelLogEventAdded, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The Trip Planner window has been opened",
+        "category": "OAB",
+        "label": "Trip Planner Opened",
+        "type": "KSP.Messages.TripPlannerOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "Trip Planner Origin Or Destination Changed",
+        "type": "KSP.Messages.TripPlannerOriginOrDestinationChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Tutorial Ended",
+        "type": "KSP.Messages.TutorialEndedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Tutorial Loaded",
+        "type": "KSP.Messages.TutorialLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Tutorial Re Started",
+        "type": "KSP.Messages.TutorialReStartedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Mission",
+        "label": "Tutorial Started",
+        "type": "KSP.Messages.TutorialStartedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player clicked a button in the UI",
+        "category": "Gameplay",
+        "label": "UI Button Clicked",
+        "type": "KSP.Messages.UIButtonClickedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has clicked a flyout item in the UI",
+        "category": "Gameplay",
+        "label": "UI Flyout Toggle Clicked",
+        "type": "KSP.Messages.UIFlyoutToggleClickedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has released a slider in the UI",
+        "category": "Gameplay",
+        "label": "UI Slider Released",
+        "type": "KSP.Messages.UISliderReleasedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has enabled a toggle in the UI",
+        "category": "Gameplay",
+        "label": "UI Toggle Disabled",
+        "type": "KSP.Messages.UIToggleDisabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has enabled a toggle in the UI",
+        "category": "Gameplay",
+        "label": "UI Toggle Enabled",
+        "type": "KSP.Messages.UIToggleEnabledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vab launch button selected",
+        "category": "OAB",
+        "label": "VAB Launch Button Pressed",
+        "type": "KSP.Messages.VABLaunchButtonPressedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "VAB Manipulation Mode Changed",
+        "type": "KSP.Messages.VABManipulationModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "OAB",
+        "label": "VAB Placement Mode Changed",
+        "type": "KSP.Messages.VABPlacementModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has changed the count of Symmetry Mode",
+        "category": "OAB",
+        "label": "VAB Symmetry Mode Changed",
+        "type": "KSP.Messages.VABSymmetryModeChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vehicle revert to VAB completed",
+        "category": "General",
+        "label": "Vehicle Revert Complete",
+        "type": "KSP.Messages.VehicleRevertCompleteMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has reverted a vehicle to VAB",
+        "category": "General",
+        "label": "Vehicle Reverted To OAB",
+        "type": "KSP.Messages.VehicleRevertedToOABMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vessel has acquired a new (vessel has never had the resource) resource via drilling or transfer",
+        "category": "Flight",
+        "label": "Vessel Acquired New Resource",
+        "type": "KSP.Messages.VesselAcquiredNewResourceMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Action Groups Changed",
+        "type": "KSP.Messages.VesselActionGroupsChanged, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has reached its Apoapsis",
+        "category": "Flight",
+        "label": "Vessel Apoapsis Reached",
+        "type": "KSP.Messages.VesselApoapsisReachedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Gameplay",
+        "label": "Vessel Behavior Initialized",
+        "type": "KSP.Messages.VesselBehaviorInitializedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Comm Net Connection Status Changed",
+        "type": "KSP.Messages.VesselCommNetConnectionStatusChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Control Owner Changed",
+        "type": "KSP.Messages.VesselControlOwnerChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Control State Changed",
+        "type": "KSP.Messages.VesselControlStateChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has created and place a vessel in the game",
+        "category": "General",
+        "label": "Vessel Created",
+        "type": "KSP.Messages.VesselCreatedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Vessel Delta V Calculation",
+        "type": "KSP.Messages.VesselDeltaVCalculationMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A vessel has been destroyed",
+        "category": "Vessel",
+        "label": "Vessel Destroyed",
+        "type": "KSP.Messages.VesselDestroyedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has docked with another vehicle or colony",
+        "category": "Flight",
+        "label": "Vessel Docked",
+        "type": "KSP.Messages.VesselDockedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Changed",
+        "type": "KSP.Messages.VesselChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Changing",
+        "type": "KSP.Messages.VesselChangingMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has lost sufficient control",
+        "category": "Vessel",
+        "label": "Vessel Insufficient Control",
+        "type": "KSP.Messages.VesselInsufficientControlMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The vessel has landed after a flight",
+        "category": "Vessel",
+        "label": "Vessel Landed After Flight",
+        "type": "KSP.Messages.VesselLandedAfterFlight, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has landed on the ground and is at rest.",
+        "category": "Vessel",
+        "label": "Vessel Landed Ground At Rest",
+        "type": "KSP.Messages.VesselLandedGroundAtRestMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Landed",
+        "type": "KSP.Messages.VesselLandedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has landed in water and is at rest.",
+        "category": "Vessel",
+        "label": "Vessel Landed Water At Rest",
+        "type": "KSP.Messages.VesselLandedWaterAtRestMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Message fired when a vessel is launched, i.e. stops being landed.",
+        "category": "Vessel",
+        "label": "Vessel Launched",
+        "type": "KSP.Messages.VesselLaunchedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Vessels left the communication range.",
+        "category": "Vessel",
+        "label": "Vessel Left Communication Range",
+        "type": "KSP.Messages.VesselLeftCommunicationRangeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has loaded a vessel",
+        "category": "OAB",
+        "label": "Vessel Loaded",
+        "type": "KSP.Messages.VesselLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has lost control",
+        "category": "Vessel",
+        "label": "Vessel Lost Control",
+        "type": "KSP.Messages.VesselLostControlMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Vessel",
+        "type": "KSP.Messages.VesselMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player vessel has run out of electricity",
+        "category": "Vessel",
+        "label": "Vessel Out Of Electricity",
+        "type": "KSP.Messages.VesselOutOfElectricityMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "General",
+        "label": "Vessel Out Of Range",
+        "type": "KSP.Messages.VesselOutOfRangeMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Part Action fully deployed (ie. deploy solar panels, parachutes fully deployed)",
+        "category": "Flight",
+        "label": "Vessel Part Action Complete",
+        "type": "KSP.Messages.VesselPartActionCompleteMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has reached its Periapsis",
+        "category": "Flight",
+        "label": "Vessel Periapsis Reached",
+        "type": "KSP.Messages.VesselPeriapsisReachedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has pitched a vehicle",
+        "category": "Vessel",
+        "label": "Vessel Pitched",
+        "type": "KSP.Messages.VesselPitchedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Players active/inactive vessel can be recovered",
+        "category": "Vessel",
+        "label": "Vessel Recoverable",
+        "type": "KSP.Messages.VesselRecoverableMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player vessel has been recovered",
+        "category": "Flight",
+        "label": "Vessel Recovered",
+        "type": "KSP.Messages.VesselRecoveredMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has rolled a vehicle",
+        "category": "Vessel",
+        "label": "Vessel Rolled",
+        "type": "KSP.Messages.VesselRolledMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has saved a vehicle",
+        "category": "OAB",
+        "label": "Vessel Saved",
+        "type": "KSP.Messages.VesselSavedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Science Situation Changed",
+        "type": "KSP.Messages.VesselScienceSituationChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Vessel",
+        "label": "Vessel Situation Changed",
+        "type": "KSP.Messages.VesselSituationChangedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "",
+        "category": "Flight",
+        "label": "Vessel Split",
+        "type": "KSP.Messages.VesselSplitMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The target of a vessel has updated",
+        "category": "Flight",
+        "label": "Vessel Target Change",
+        "type": "KSP.Messages.VesselTargetChange, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Throttle change but cant because timewarping",
+        "category": "Vessel",
+        "label": "Vessel Throttle Locked Due To Timewarping",
+        "type": "KSP.Messages.VesselThrottleLockedDueToTimewarpingMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player's vehicle has undocked from another vehicle or colony",
+        "category": "Flight",
+        "label": "Vessel Undocked",
+        "type": "KSP.Messages.VesselUndockedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Player has yawed a vehicle",
+        "category": "Vessel",
+        "label": "Vessel Yawed",
+        "type": "KSP.Messages.VesselYawedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Base type of VFX cue",
+        "category": "CFXS",
+        "label": "VFX Cue",
+        "type": "KSP.Messages.VFXCueMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Event fired when the view controller flow finished",
+        "category": "General",
+        "label": "View Controller Flow Finished",
+        "type": "KSP.Messages.ViewControllerFlowFinished, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A waypoint has been added",
+        "category": "Mission",
+        "label": "Waypoint Added",
+        "type": "KSP.Messages.WaypointAddedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A waypoint has been removed",
+        "category": "Mission",
+        "label": "Waypoint Removed",
+        "type": "KSP.Messages.WaypointRemovedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A workspace has been loaded",
+        "category": "OAB",
+        "label": "Workspace Loaded",
+        "type": "KSP.Messages.WorkspaceLoadedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "The workspace menu has been opened",
+        "category": "OAB",
+        "label": "Workspace Menu Opened",
+        "type": "KSP.Messages.WorkspaceMenuOpenedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A workspace has been merged",
+        "category": "OAB",
+        "label": "Workspace Merged",
+        "type": "KSP.Messages.WorkspaceMergedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "A workspace has been saved",
+        "category": "OAB",
+        "label": "Workspace Saved",
+        "type": "KSP.Messages.WorkspaceSavedMessage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+]

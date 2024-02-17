@@ -1,8 +1,8 @@
 import ArrayInput from '../../inputs/ArrayInput.jsx'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
+import ConditionEditor from './ConditionEditor.jsx'
 
 import conditionSetOperators from '/src/data/mission/stage/condition/condition-set-operator.json'
-import ConditionEditor from './ConditionEditor.jsx'
 
 export default function ConditionSetEditor({condition, updateData}) {
   return <>

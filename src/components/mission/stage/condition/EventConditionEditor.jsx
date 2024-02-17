@@ -1,7 +1,10 @@
-import TextInput from '../../inputs/TextInput.jsx'
+import ComplexAutocompleteInput from '../../inputs/ComplexAutocompleteInput.jsx'
+
+import eventTypes from '/src/data/mission/stage/condition/event-type.json'
 
 export default function EventConditionEditor({condition, updateData}) {
-  return <>
-    <TextInput name="EventTypeAQN" label="Event Type" value={condition.EventTypeAQN} onChange={updateData}/>
-  </>;
+  return (
+    <ComplexAutocompleteInput name="EventTypeAQN" label="Event Type" value={condition.EventTypeAQN}
+                              onChange={updateData} options={eventTypes} placeholder="Select event type"/>
+  )
 }
