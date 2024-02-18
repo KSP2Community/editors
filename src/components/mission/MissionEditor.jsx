@@ -1,14 +1,23 @@
 import {
-  Box, Button,
-  Card, Dropdown, IconButton, Menu, MenuButton, MenuItem, Tooltip,
+  Box,
+  Card,
+  Dropdown,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  Tooltip,
   Typography
 } from '@mui/joy'
+import {v4 as uuidv4} from 'uuid'
+import {FiFile, FiFolder, FiSave} from 'react-icons/fi'
 import TextInput from './inputs/TextInput.jsx'
 import DropdownInput from './inputs/DropdownInput.jsx'
 import Toggle from './inputs/Toggle.jsx'
 import AutocompleteInput from './inputs/AutocompleteInput.jsx'
 import ContentBranchEditor from './branch/ContentBranchEditor.jsx'
 import StageEditor from './stage/StageEditor.jsx'
+import ArrayInput from './inputs/ArrayInput.jsx'
 
 import missionTypes from '/src/data/mission/mission-type.json'
 import missionStates from '/src/data/mission/mission-state.json'
@@ -18,34 +27,58 @@ import missionUiDisplayType from '/src/data/mission/mission-ui-display-type.json
 import triumphLoopVideos from '/src/data/mission/triumph-loop-video-keys.json'
 import stageDefaults from '/src/data/mission/stage/stage-defaults.json'
 import contentBranchDefaults from '/src/data/mission/branch/content-branch-defaults.json'
-import ArrayInput from './inputs/ArrayInput.jsx'
-import {FiFile, FiFolder, FiSave} from 'react-icons/fi'
-import {useState} from 'react'
 
 function getMaxStageID(missionStages) {
   return missionStages.reduce((max, stage) => {
-    return stage.StageID > max ? stage.StageID : max
+    const stageID = parseInt(stage.StageID)
+    return stageID > max ? stageID : max
   }, -1)
 }
 
 export default function MissionEditor({missionData, updateMissionData, ...props}) {
-  return (
+  return <>
     <Card
       {...props}
       variant="outlined"
-      sx={[
-        {
-          padding: '1rem',
-        },
-        ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
-      ]}
     >
       <Box sx={{
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'space-between',
       }}>
-        <Typography level="h4" component="h2">Mission editor</Typography>
+        <Typography level="h4" component="h2">
+          {missionData.ID && `Mission ${missionData.ID}` || "New mission"}
+        </Typography>
+        <Box sx={{
+          display: 'flex',
+          gap: '0.5rem',
+        }}>
+          <Tooltip title="New mission" placement="top">
+            <IconButton aria-label="New mission" variant="soft">
+              <FiFile/>
+            </IconButton>
+          </Tooltip>
+          <Tooltip title="Open mission file" placement="top">
+            <IconButton aria-label="Open mission file" variant="soft">
+              <FiFolder/>
+            </IconButton>
+          </Tooltip>
+
+          <Dropdown>
+            <Tooltip title="Save mission file" placement="top">
+              <MenuButton
+                slots={{root: IconButton}}
+                slotProps={{root: {variant: 'soft', 'aria-label': 'Save mission file'}}}
+              >
+                <FiSave/>
+              </MenuButton>
+            </Tooltip>
+            <Menu>
+              <MenuItem>Save as .patch file</MenuItem>
+              <MenuItem>Save as .json file</MenuItem>
+            </Menu>
+          </Dropdown>
+        </Box>
       </Box>
 
       <Card sx={{
@@ -53,6 +86,8 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
         border: 'none',
         maxHeight: '100%',
         overflowY: 'auto',
+        marginX: '-0.5rem',
+        paddingX: '0.5rem',
       }}>
         <TextInput name="ID" label="Mission ID" value={missionData.ID} onChange={updateMissionData}/>
         <TextInput name="name" label="Name Localization Key" value={missionData.name}
@@ -80,21 +115,27 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
                     title="Stages"
                     addButtonText="Add stage"
                     noItemsText="No stages"
-                    itemTitle={({item}) => `Stage ${item.StageID}`}
-                    addButtonClick={() => updateMissionData("missionStages", [...missionData.missionStages, {
-                      StageID: getMaxStageID(missionData.missionStages) + 1,
-                      ...stageDefaults
-                    }])}
+                    itemTitle={({item}) => item.name || `ID: ${item.StageID}`}
+                    addButtonClick={() => {
+                      const newStageID = getMaxStageID(missionData.missionStages) + 1
+                      updateMissionData("missionStages", [...missionData.missionStages, {
+                        StageID: newStageID,
+                        __uuid: uuidv4(),
+                        ...stageDefaults
+                      }])
+                      updateMissionData("maxStageID", newStageID)
+                    }}
                     updateData={index => (name, value) => {
                       const newStages = [...missionData.missionStages]
                       newStages[index][name] = value
-                      updateMissionData("maxStageID", index)
                       updateMissionData("missionStages", newStages)
+                      updateMissionData("maxStageID", getMaxStageID(newStages))
                     }}
                     deleteData={index => {
                       const newStages = [...missionData.missionStages]
                       newStages.splice(index, 1)
                       updateMissionData("missionStages", newStages)
+                      updateMissionData("maxStageID", getMaxStageID(newStages))
                     }}
                     renderComponent={({item, updateData}) => <StageEditor stage={item}
                                                                           updateStageData={updateData}/>}
@@ -105,8 +146,9 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
                     title="Content branches"
                     addButtonText="Add branch"
                     noItemsText="No content branches"
-                    itemTitle={({item}) => `Branch ${item.ID}`}
+                    itemTitle={({item}) => item.ID}
                     addButtonClick={() => updateMissionData("ContentBranches", [...missionData.ContentBranches, {
+                      __uuid: uuidv4(),
                       ...contentBranchDefaults
                     }])}
                     updateData={(index) => (name, value) => {
@@ -124,5 +166,5 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
         />
       </Card>
     </Card>
-  )
+  </>
 }

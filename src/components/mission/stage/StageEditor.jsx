@@ -1,5 +1,6 @@
 import * as React from 'react'
 import {Typography} from '@mui/joy'
+import {v4 as uuidv4} from 'uuid'
 
 import ConditionEditor from './condition/ConditionEditor.jsx'
 import RewardEditor from './reward/RewardEditor.jsx'
@@ -35,7 +36,7 @@ export default function StageEditor({stage, updateStageData}) {
                 addButtonClick={() => {
                   const newRewardDefinitions = [
                     ...stage.MissionReward.MissionRewardDefinitions,
-                    {...rewardDefaults}
+                    {...rewardDefaults, __uuid: uuidv4()}
                   ]
                   updateStageData("MissionReward", {
                     ...stage.MissionReward,
@@ -66,7 +67,7 @@ export default function StageEditor({stage, updateStageData}) {
                 addButtonClick={() => {
                   updateStageData("actions", [
                     ...stage.actions,
-                    null
+                    {__uuid: uuidv4()}
                   ])
                 }}
                 updateData={index => value => {

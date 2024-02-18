@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import * as Editors from './EditorComponents.jsx'
 import ComplexAutocompleteInput from '../inputs/ComplexAutocompleteInput.jsx'
+import {v4 as uuidv4} from 'uuid'
 
 function getAQN(className) {
   return `KSP.Game.Missions.${className}, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`
@@ -35,7 +36,10 @@ export default function ActionEditor({action, updateData}) {
                                 updateData(
                                   newValue === null
                                     ? null
-                                    : {...actionTypes.find(type => type.value === newValue)?.defaults}
+                                    : {
+                                      __uuid: action?.__uuid || uuidv4(),
+                                      ...actionTypes.find(type => type.value === newValue)?.defaults
+                                    }
                                 )
                               }}
     />

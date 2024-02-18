@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {v4 as uuidv4} from 'uuid'
 
 import ConditionSetEditor from './ConditionSetEditor.jsx'
 import EventConditionEditor from './EventConditionEditor.jsx'
@@ -9,7 +10,7 @@ import eventConditionDefaults from '/src/data/mission/stage/condition/event-cond
 import propertyConditionDefaults from '/src/data/mission/stage/condition/property-condition-defaults.json'
 import ComplexAutocompleteInput from '../../inputs/ComplexAutocompleteInput.jsx'
 
-const conditionTypes = [
+export const conditionTypes = [
   {
     value: "ConditionSet",
     label: "Condition Set",
@@ -33,6 +34,20 @@ const conditionTypes = [
   }
 ]
 
+export function getConditionLabel(condition) {
+  const typeLabel = conditionTypes.find(type => type.value === condition.ConditionType).label
+
+  switch (condition.ConditionType) {
+    case "ConditionSet":
+      return condition.ConditionMode
+        + ` (${condition.Children.length} ${condition.Children.length === 1 ? "child" : "children"})`
+    case "EventCondition":
+      return typeLabel
+    case "PropertyCondition":
+      return typeLabel
+  }
+}
+
 export default function ConditionEditor({condition, updateData}) {
   const [conditionType, setConditionType] = useState(condition ? condition.ConditionType : null)
 
@@ -46,7 +61,10 @@ export default function ConditionEditor({condition, updateData}) {
                                 updateData(
                                   newValue === null
                                     ? null
-                                    : {...conditionTypes.find(type => type.value === newValue)?.defaults}
+                                    : {
+                                      __uuid: condition?.__uuid || uuidv4(),
+                                      ...conditionTypes.find(type => type.value === newValue)?.defaults
+                                    }
                                 )
                               }}
     />

@@ -1,10 +1,10 @@
-import {Typography} from '@mui/joy'
 import * as React from 'react'
 import DropdownInput from '../inputs/DropdownInput.jsx'
 
 import contentBranchIDKeys from '/src/data/mission/branch/content-branch-id-keys.json'
 import ActionEditor from '../action/ActionEditor.jsx'
 import ArrayInput from '../inputs/ArrayInput.jsx'
+import {v4 as uuidv4} from 'uuid'
 
 export default function ContentBranchEditor({branch, updateBranchData}) {
   return <>
@@ -19,7 +19,7 @@ export default function ContentBranchEditor({branch, updateBranchData}) {
                 addButtonClick={() => {
                   updateBranchData("actions", [
                     ...branch.actions,
-                    null
+                    {__uuid: uuidv4()}
                   ])
                 }}
                 updateData={index => value => {

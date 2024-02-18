@@ -1,6 +1,8 @@
+import {v4 as uuidv4} from 'uuid'
+
 import ArrayInput from '../../inputs/ArrayInput.jsx'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
-import ConditionEditor from './ConditionEditor.jsx'
+import ConditionEditor, {getConditionLabel} from './ConditionEditor.jsx'
 
 import conditionSetOperators from '/src/data/mission/stage/condition/condition-set-operator.json'
 
@@ -13,11 +15,17 @@ export default function ConditionSetEditor({condition, updateData}) {
                 title="Condition children"
                 addButtonText="Add condition"
                 noItemsText="No conditions"
-                itemTitle={({index}) => `Condition #${index + 1}`}
+                itemTitle={({item, index}) => {
+                  if (!item || !item.ConditionType) {
+                    return `Condition #${index + 1}`
+                  }
+
+                  return getConditionLabel(item)
+                }}
                 addButtonClick={() => {
                   updateData("Children", [
                     ...condition.Children,
-                    null
+                    {__uuid: uuidv4()}
                   ])
                 }}
                 updateData={index => value => {

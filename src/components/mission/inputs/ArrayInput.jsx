@@ -69,7 +69,7 @@ export default function ArrayInput(
             : itemTitle
 
           return (
-            <Accordion key={index} sx={{
+            <Accordion key={item.__uuid || index} sx={{
               '&:last-child': {
                 borderBottomWidth: 0,
               }

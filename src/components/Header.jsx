@@ -2,7 +2,6 @@ import {Box, Button, IconButton, Stack, Tooltip, Typography, useColorScheme} fro
 import {FiHome, FiMoon, FiSun} from 'react-icons/fi'
 import {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
-import {useApp} from '../contexts/AppContext.jsx'
 
 function ColorSchemeToggle() {
   const {mode, setMode} = useColorScheme()
@@ -36,8 +35,6 @@ function ColorSchemeToggle() {
 }
 
 export default function Header() {
-  const {appData} = useApp()
-
   return (
     <Box
       sx={{
@@ -59,21 +56,23 @@ export default function Header() {
           alignItems="center"
           spacing={1}
         >
-          <IconButton
-            size="md"
-            variant="outlined"
-            color="neutral"
-            sx={{
-              borderRadius: '50%',
-              '&.active': {
-                bgcolor: 'primary.softActiveBg'
-              }
-            }}
-            component={NavLink}
-            to="/"
-          >
-            <FiHome/>
-          </IconButton>
+          <Tooltip title="Homepage">
+            <IconButton
+              size="md"
+              variant="outlined"
+              color="neutral"
+              sx={{
+                borderRadius: '50%',
+                '&.active': {
+                  bgcolor: 'primary.softActiveBg'
+                }
+              }}
+              component={NavLink}
+              to="/"
+            >
+              <FiHome/>
+            </IconButton>
+          </Tooltip>
           <Button
             variant="plain"
             color="neutral"
@@ -112,7 +111,6 @@ export default function Header() {
         textAlign: 'center',
         whiteSpace: 'nowrap',
       }}>
-        {appData.title ?? ''}
       </Typography>
       <Box
         sx={{
