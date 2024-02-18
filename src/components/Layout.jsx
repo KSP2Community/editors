@@ -9,7 +9,7 @@ function Root(props) {
         {
           display: 'grid',
           gridTemplateRows: '64px 1fr',
-          minHeight: '100vh',
+          height: '100vh',
         },
         ...(Array.isArray(props.sx) ? props.sx : [props.sx]),
       ]}
@@ -136,7 +136,7 @@ function SideDrawer(props) {
   )
 }
 
-export default {
+export {
   Root,
   Header,
   SideNav,

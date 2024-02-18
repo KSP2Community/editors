@@ -1,6 +1,5 @@
 import {useState} from 'react'
-import ActivateMissionActionEditor from './ActivateMissionActionEditor.jsx'
-import DropdownInput from '../inputs/DropdownInput.jsx'
+import * as Editors from './EditorComponents.jsx'
 import ComplexAutocompleteInput from '../inputs/ComplexAutocompleteInput.jsx'
 
 function getAQN(className) {
@@ -12,7 +11,7 @@ const actionTypes = [
     value: getAQN("ActivateMissionAction"),
     label: "Activate Mission",
     description: "Activate a mission by passing in a MissionOwner and MissionID, this will assume the Owner ID based on current player entry and current player's agency.",
-    component: ActivateMissionActionEditor,
+    component: "ActivateMissionActionEditor",
     defaults: {
       $type: getAQN("ActivateMissionAction"),
       TargetMissionID: "",
@@ -25,7 +24,8 @@ const actionTypes = [
 export default function ActionEditor({action, updateData}) {
   const [actionType, setActionType] = useState(action ? action.$type : null)
 
-  const EditorComponent = actionTypes.find(type => type.value === actionType)?.component
+  const componentName = actionTypes.find(type => type.value === actionType)?.component
+  const EditorComponent = componentName ? Editors[componentName] : null
 
   return <>
     <ComplexAutocompleteInput name="ActionType" label="Action Type" value={actionType}

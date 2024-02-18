@@ -1,12 +1,13 @@
-import {Box, Button, IconButton, Stack, Tooltip, useColorScheme} from '@mui/joy'
+import {Box, Button, IconButton, Stack, Tooltip, Typography, useColorScheme} from '@mui/joy'
 import {FiHome, FiMoon, FiSun} from 'react-icons/fi'
-import React from 'react'
+import {useState, useEffect} from 'react'
 import {NavLink} from 'react-router-dom'
+import {useApp} from '../contexts/AppContext.jsx'
 
 function ColorSchemeToggle() {
   const {mode, setMode} = useColorScheme()
-  const [mounted, setMounted] = React.useState(false)
-  React.useEffect(() => {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
     setMounted(true)
   }, [])
   if (!mounted) {
@@ -35,75 +36,100 @@ function ColorSchemeToggle() {
 }
 
 export default function Header() {
+  const {appData} = useApp()
+
   return (
     <Box
       sx={{
         display: 'flex',
         flexGrow: 1,
-        justifyContent: 'space-between',
+        justifyContent: 'center',
       }}
     >
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={1}
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-start',
+          width: '100%',
+        }}
       >
-        <IconButton
-          size="md"
-          variant="outlined"
-          color="neutral"
-          sx={{
-            borderRadius: '50%',
-            '&.active': {
-              bgcolor: 'primary.softActiveBg'
-            }
-          }}
-          component={NavLink}
-          to="/"
+        <Stack
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
         >
-          <FiHome/>
-        </IconButton>
-        <Button
-          variant="plain"
-          color="neutral"
-          component={NavLink}
-          to="/missions"
-          size="sm"
-          sx={{
-            alignSelf: 'center',
-            '&.active': {
-              bgcolor: 'primary.softActiveBg'
-            }
-          }}
-        >
-          Mission editor
-        </Button>
-        <Button
-          variant="plain"
-          color="neutral"
-          aria-pressed="false"
-          component={NavLink}
-          to="/swinfo"
-          size="sm"
-          sx={{
-            alignSelf: 'center',
-            '&.active': {
-              bgcolor: 'primary.softActiveBg'
-            }
-          }}
-        >
-          swinfo.json
-        </Button>
-      </Stack>
-      <Stack
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        spacing={1}
+          <IconButton
+            size="md"
+            variant="outlined"
+            color="neutral"
+            sx={{
+              borderRadius: '50%',
+              '&.active': {
+                bgcolor: 'primary.softActiveBg'
+              }
+            }}
+            component={NavLink}
+            to="/"
+          >
+            <FiHome/>
+          </IconButton>
+          <Button
+            variant="plain"
+            color="neutral"
+            component={NavLink}
+            to="/missions"
+            size="sm"
+            sx={{
+              alignSelf: 'center',
+              '&.active': {
+                bgcolor: 'primary.softActiveBg'
+              }
+            }}
+          >
+            Mission editor
+          </Button>
+          <Button
+            variant="plain"
+            color="neutral"
+            aria-pressed="false"
+            component={NavLink}
+            to="/swinfo"
+            size="sm"
+            sx={{
+              alignSelf: 'center',
+              '&.active': {
+                bgcolor: 'primary.softActiveBg'
+              }
+            }}
+          >
+            swinfo.json
+          </Button>
+        </Stack>
+      </Box>
+      <Typography variant="h2" level="h4" sx={{
+        flexGrow: 1,
+        textAlign: 'center',
+        whiteSpace: 'nowrap',
+      }}>
+        {appData.title ?? ''}
+      </Typography>
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'flex-end',
+          width: '100%',
+        }}
       >
-        <ColorSchemeToggle/>
-      </Stack>
+        <Stack
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          spacing={1}
+        >
+          <ColorSchemeToggle/>
+        </Stack>
+      </Box>
     </Box>
   )
 }
