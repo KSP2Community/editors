@@ -23,7 +23,7 @@ export default function StageEditor({stage, updateStageData}) {
 
     <Typography level="h5" component="h3">Condition</Typography>
     <ConditionEditor condition={stage.scriptableCondition} updateData={
-      condition => updateStageData("scriptableCondition", {...condition})
+      condition => updateStageData("scriptableCondition", condition === null ? null : {...condition})
     }/>
 
     <ArrayInput level={1}
@@ -57,7 +57,29 @@ export default function StageEditor({stage, updateStageData}) {
                 renderComponent={({item, updateData}) => <RewardEditor reward={item} updateRewardData={updateData}/>}
     />
 
-    <Typography level="h5" component="h3">Actions</Typography>
-    <ActionEditor/>
+    <ArrayInput level={1}
+                array={stage.actions}
+                title="Actions"
+                addButtonText="Add action"
+                noItemsText="No action"
+                itemTitle={({index}) => `Action #${index + 1}`}
+                addButtonClick={() => {
+                  updateStageData("actions", [
+                    ...stage.actions,
+                    null
+                  ])
+                }}
+                updateData={index => value => {
+                  const newActions = [...stage.actions]
+                  newActions[index] = value
+                  updateStageData("actions", newActions)
+                }}
+                deleteData={index => {
+                  const newActions = [...stage.actions]
+                  newActions.splice(index, 1)
+                  updateStageData("actions", newActions)
+                }}
+                renderComponent={({item, updateData}) => <ActionEditor action={item} updateData={updateData}/>}
+    />
   </>
 }

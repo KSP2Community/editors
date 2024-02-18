@@ -8,7 +8,7 @@ import propertyOperators from '/src/data/mission/stage/condition/property-operat
 
 export default function PropertyConditionEditor({condition, updateData}) {
   return <>
-    <ComplexAutocompleteInput name="PropertyTypeAQN" label="Property Type" value={condition.PropertyTypeAQN}
+    <ComplexAutocompleteInput name="PropertyTypeAQN" label="Property Type" value={condition.PropertyTypeAQN} freeSolo
                               onChange={updateData} options={propertyTypes} placeholder="Select property type"/>
     <Toggle name="RequireCurrentValue" label="Require Current Value" value={condition.RequireCurrentValue}
             onChange={updateData}/>

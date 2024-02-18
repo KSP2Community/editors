@@ -4,7 +4,7 @@ import eventTypes from '/src/data/mission/stage/condition/event-type.json'
 
 export default function EventConditionEditor({condition, updateData}) {
   return (
-    <ComplexAutocompleteInput name="EventTypeAQN" label="Event Type" value={condition.EventTypeAQN}
+    <ComplexAutocompleteInput name="EventTypeAQN" label="Event Type" value={condition.EventTypeAQN} freeSolo
                               onChange={updateData} options={eventTypes} placeholder="Select event type"/>
   )
 }
