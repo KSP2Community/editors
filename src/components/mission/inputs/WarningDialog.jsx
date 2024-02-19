@@ -1,7 +1,7 @@
 import {Button, DialogActions, DialogContent, DialogTitle, Divider, Modal, ModalDialog} from '@mui/joy'
 import {FiAlertTriangle} from 'react-icons/fi'
 
-export default function DeleteDialog({labelToDelete, open, onClose, onDelete}) {
+export default function WarningDialog({title, content, open, closeText, confirmText, onClose, onConfirm}) {
   return (
     <Modal open={open} onClose={onClose}>
       <ModalDialog
@@ -22,21 +22,21 @@ export default function DeleteDialog({labelToDelete, open, onClose, onDelete}) {
       >
         <DialogTitle>
           <FiAlertTriangle/>
-          Confirmation
+          {title}
         </DialogTitle>
         <Divider/>
         <DialogContent>
-          Are you sure you want to delete {labelToDelete}?
+          {content}
         </DialogContent>
         <DialogActions>
           <Button variant="solid" color="danger" onClick={() => {
-            onDelete()
+            onConfirm()
             onClose()
           }}>
-            Delete
+            {confirmText}
           </Button>
           <Button variant="plain" color="neutral" onClick={onClose}>
-            Cancel
+            {closeText}
           </Button>
         </DialogActions>
       </ModalDialog>

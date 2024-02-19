@@ -12,7 +12,7 @@ import {
 import {FiPlus, FiTrash} from 'react-icons/fi'
 import {useState} from 'react'
 
-import DeleteDialog from './DeleteDialog.jsx'
+import WarningDialog from './WarningDialog.jsx'
 import {truncate} from '../../../utils/strings.js'
 
 export default function ArrayInput(
@@ -95,8 +95,12 @@ export default function ArrayInput(
                           onClick={() => setDeleteDialogOpenIndex(index)}>
                     Delete "{truncate(itemTitleText, 50)}"
                   </Button>
-                  <DeleteDialog labelToDelete={`"${truncate(itemTitleText, 50)}"`} open={deleteDialogOpenIndex === index}
-                                onClose={() => setDeleteDialogOpenIndex(-1)} onDelete={() => deleteData(index)}/>
+                  <WarningDialog title="Confirmation"
+                                 content={`Are you sure you want to delete "${truncate(itemTitleText, 50)}"`}
+                                 open={deleteDialogOpenIndex === index} closeText="Cancel" confirmText="Delete"
+                                 onClose={() => setDeleteDialogOpenIndex(-1)}
+                                 onConfirm={() => deleteData(index)}
+                  />
                 </Box>
               </AccordionDetails>
             </Accordion>
