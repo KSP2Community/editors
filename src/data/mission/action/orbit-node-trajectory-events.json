@@ -1,0 +1,20 @@
+[
+    "ClosestApproach",
+    "Capture",
+    "Acceleration",
+    "ExitingSOI",
+    "EnteringSOI",
+    "EndThrust",
+    "PartialOutOfFuel",
+    "CompletelyOutOfFuel",
+    "Collision",
+    "Periapsis",
+    "Apoapsis",
+    "Intersect1A",
+    "Intersect1B",
+    "Intersect2A",
+    "Intersect2B",
+    "AscendingNode",
+    "DescendingNode",
+    "HighlightNode"
+]

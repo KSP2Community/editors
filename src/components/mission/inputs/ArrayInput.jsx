@@ -13,6 +13,7 @@ import {FiPlus, FiTrash} from 'react-icons/fi'
 import {useState} from 'react'
 
 import DeleteDialog from './DeleteDialog.jsx'
+import {truncate} from '../../../utils/strings.js'
 
 export default function ArrayInput(
   {
@@ -75,7 +76,13 @@ export default function ArrayInput(
               }
             }}>
               <AccordionSummary>
-                <Typography level="h5" component="h3">{itemTitleText}</Typography>
+                <Typography level="h5" component="h3" sx={{
+                  overflow: 'hidden',
+                  textOverflow: 'ellipsis',
+                  whiteSpace: 'nowrap'
+                }}>
+                  {itemTitleText}
+                </Typography>
               </AccordionSummary>
               <AccordionDetails variant="soft">
                 <Box sx={{
@@ -86,9 +93,9 @@ export default function ArrayInput(
                   {renderComponent({item, index, updateData: updateData(index)})}
                   <Button variant="outlined" color="danger" startDecorator={<FiTrash/>}
                           onClick={() => setDeleteDialogOpenIndex(index)}>
-                    Delete {itemTitleText}
+                    Delete "{truncate(itemTitleText, 50)}"
                   </Button>
-                  <DeleteDialog labelToDelete={itemTitleText} open={deleteDialogOpenIndex === index}
+                  <DeleteDialog labelToDelete={`"${truncate(itemTitleText, 50)}"`} open={deleteDialogOpenIndex === index}
                                 onClose={() => setDeleteDialogOpenIndex(-1)} onDelete={() => deleteData(index)}/>
                 </Box>
               </AccordionDetails>

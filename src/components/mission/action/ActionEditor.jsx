@@ -1,26 +1,20 @@
 import {useState} from 'react'
-import * as Editors from './EditorComponents.jsx'
-import ComplexAutocompleteInput from '../inputs/ComplexAutocompleteInput.jsx'
 import {v4 as uuidv4} from 'uuid'
 
-function getAQN(className) {
-  return `KSP.Game.Missions.${className}, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`
-}
+import * as Editors from './EditorComponents.jsx'
+import ComplexAutocompleteInput from '../inputs/ComplexAutocompleteInput.jsx'
+import {getClassNameFromAQN} from '../../../utils/csharp.js'
 
-const actionTypes = [
-  {
-    value: getAQN("ActivateMissionAction"),
-    label: "Activate Mission",
-    description: "Activate a mission by passing in a MissionOwner and MissionID, this will assume the Owner ID based on current player entry and current player's agency.",
-    component: "ActivateMissionActionEditor",
-    defaults: {
-      $type: getAQN("ActivateMissionAction"),
-      TargetMissionID: "",
-      MissionOwner: "Player",
-      StageEvent: null
-    }
+import actionTypes from '/src/data/mission/action/action-types.json'
+
+export function getActionLabel({index, item}) {
+  if (!item || !item.$type) {
+    return `Action #${index + 1}`
   }
-]
+
+  const actionTypeLabel = actionTypes.find(type => type.value === item.$type)?.label
+  return actionTypeLabel || getClassNameFromAQN(item.$type)
+}
 
 export default function ActionEditor({action, updateData}) {
   const [actionType, setActionType] = useState(action ? action.$type : null)
@@ -33,14 +27,10 @@ export default function ActionEditor({action, updateData}) {
                               options={actionTypes} placeholder="Select action type"
                               onChange={(_, newValue) => {
                                 setActionType(newValue)
-                                updateData(
-                                  newValue === null
-                                    ? null
-                                    : {
-                                      __uuid: action?.__uuid || uuidv4(),
-                                      ...actionTypes.find(type => type.value === newValue)?.defaults
-                                    }
-                                )
+                                updateData({
+                                  __uuid: action?.__uuid || uuidv4(),
+                                  ...actionTypes.find(type => type.value === newValue)?.defaults
+                                })
                               }}
     />
     {EditorComponent && <EditorComponent action={action} updateData={

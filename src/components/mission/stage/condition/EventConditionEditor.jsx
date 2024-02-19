@@ -1,6 +1,6 @@
 import ComplexAutocompleteInput from '../../inputs/ComplexAutocompleteInput.jsx'
 
-import eventTypes from '/src/data/mission/stage/condition/event-type.json'
+import eventTypes from '/src/data/mission/stage/condition/event-types.json'
 
 export default function EventConditionEditor({condition, updateData}) {
   return (

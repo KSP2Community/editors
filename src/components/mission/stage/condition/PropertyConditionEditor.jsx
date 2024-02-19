@@ -3,8 +3,8 @@ import TextInput from '../../inputs/TextInput.jsx'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
 import ComplexAutocompleteInput from '../../inputs/ComplexAutocompleteInput.jsx'
 
-import propertyTypes from '/src/data/mission/stage/condition/property-type.json'
-import propertyOperators from '/src/data/mission/stage/condition/property-operator.json'
+import propertyTypes from '/src/data/mission/stage/condition/property-types.json'
+import propertyOperators from '/src/data/mission/stage/condition/property-operators.json'
 
 export default function PropertyConditionEditor({condition, updateData}) {
   return <>

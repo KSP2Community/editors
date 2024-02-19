@@ -2,7 +2,7 @@ import * as React from 'react'
 import DropdownInput from '../inputs/DropdownInput.jsx'
 
 import contentBranchIDKeys from '/src/data/mission/branch/content-branch-id-keys.json'
-import ActionEditor from '../action/ActionEditor.jsx'
+import ActionEditor, {getActionLabel} from '../action/ActionEditor.jsx'
 import ArrayInput from '../inputs/ArrayInput.jsx'
 import {v4 as uuidv4} from 'uuid'
 
@@ -15,7 +15,7 @@ export default function ContentBranchEditor({branch, updateBranchData}) {
                 title="Actions"
                 addButtonText="Add action"
                 noItemsText="No action"
-                itemTitle={({index}) => `Action #${index + 1}`}
+                itemTitle={getActionLabel}
                 addButtonClick={() => {
                   updateBranchData("actions", [
                     ...branch.actions,

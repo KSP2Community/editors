@@ -4,7 +4,7 @@ import {v4 as uuidv4} from 'uuid'
 
 import ConditionEditor from './condition/ConditionEditor.jsx'
 import RewardEditor from './reward/RewardEditor.jsx'
-import ActionEditor from '../action/ActionEditor.jsx'
+import ActionEditor, {getActionLabel} from '../action/ActionEditor.jsx'
 import TextInput from '../inputs/TextInput.jsx'
 import Toggle from '../inputs/Toggle.jsx'
 import rewardDefaults from '/src/data/mission/stage/reward/reward-defaults.json'
@@ -32,7 +32,9 @@ export default function StageEditor({stage, updateStageData}) {
                 title="Mission rewards"
                 addButtonText="Add reward"
                 noItemsText="No mission rewards"
-                itemTitle={({index}) => `Reward #${index + 1}`}
+                itemTitle={({item}) =>
+                  item.MissionRewardType === 'None' ? 'None' : `${item.RewardAmount} ${item.MissionRewardType}`
+                }
                 addButtonClick={() => {
                   const newRewardDefinitions = [
                     ...stage.MissionReward.MissionRewardDefinitions,
@@ -63,7 +65,7 @@ export default function StageEditor({stage, updateStageData}) {
                 title="Actions"
                 addButtonText="Add action"
                 noItemsText="No action"
-                itemTitle={({index}) => `Action #${index + 1}`}
+                itemTitle={getActionLabel}
                 addButtonClick={() => {
                   updateStageData("actions", [
                     ...stage.actions,

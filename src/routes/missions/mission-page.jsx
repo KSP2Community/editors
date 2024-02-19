@@ -47,7 +47,15 @@ export default function MissionPage() {
           borderRadius: '0.5rem',
         }}>
           {JSON.stringify(missionData, (key, value) => {
-            return key === '__uuid' ? undefined : value
+            if (key === '__uuid') {
+              return undefined
+            }
+
+            if (value instanceof Object && Object.keys(value).length === 1 && value.hasOwnProperty('__uuid')) {
+              return null
+            }
+
+            return value
           }, 2)}
         </SyntaxHighlighter>
       </Card>

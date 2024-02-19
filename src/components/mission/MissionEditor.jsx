@@ -19,11 +19,11 @@ import ContentBranchEditor from './branch/ContentBranchEditor.jsx'
 import StageEditor from './stage/StageEditor.jsx'
 import ArrayInput from './inputs/ArrayInput.jsx'
 
-import missionTypes from '/src/data/mission/mission-type.json'
-import missionStates from '/src/data/mission/mission-state.json'
-import missionOwners from '/src/data/mission/mission-owner.json'
+import missionTypes from '/src/data/mission/mission-types.json'
+import missionStates from '/src/data/mission/mission-states.json'
+import missionOwners from '/src/data/mission/mission-owners.json'
 import missionGranters from '/src/data/mission/mission-granter-keys.json'
-import missionUiDisplayType from '/src/data/mission/mission-ui-display-type.json'
+import missionUiDisplayType from '/src/data/mission/mission-ui-display-types.json'
 import triumphLoopVideos from '/src/data/mission/triumph-loop-video-keys.json'
 import stageDefaults from '/src/data/mission/stage/stage-defaults.json'
 import contentBranchDefaults from '/src/data/mission/branch/content-branch-defaults.json'
@@ -54,12 +54,12 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
           gap: '0.5rem',
         }}>
           <Tooltip title="New mission" placement="top">
-            <IconButton aria-label="New mission" variant="soft">
+            <IconButton aria-label="New mission" variant="outlined">
               <FiFile/>
             </IconButton>
           </Tooltip>
           <Tooltip title="Open mission file" placement="top">
-            <IconButton aria-label="Open mission file" variant="soft">
+            <IconButton aria-label="Open mission file" variant="outlined">
               <FiFolder/>
             </IconButton>
           </Tooltip>
@@ -68,7 +68,7 @@ export default function MissionEditor({missionData, updateMissionData, ...props}
             <Tooltip title="Save mission file" placement="top">
               <MenuButton
                 slots={{root: IconButton}}
-                slotProps={{root: {variant: 'soft', 'aria-label': 'Save mission file'}}}
+                slotProps={{root: {variant: 'outlined', 'aria-label': 'Save mission file'}}}
               >
                 <FiSave/>
               </MenuButton>

@@ -1,0 +1,272 @@
+[
+    {
+        "value": "KSP.Game.Missions.ActivateMissionAction, Assembly-CSharp",
+        "label": "Activate Mission",
+        "description": "Activate a mission by passing in a MissionOwner and MissionID, this will assume the Owner ID based on current player entry and current player's agency.",
+        "component": "ActivateMissionActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.ActivateMissionAction, Assembly-CSharp",
+            "TargetMissionID": "",
+            "MissionOwner": "None",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.FullscreenVideoAction, Assembly-CSharp",
+        "label": "Fullscreen Video",
+        "description": "Display full screen video.",
+        "component": "FullscreenVideoActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.FullscreenVideoAction, Assembly-CSharp",
+            "eventTypeOnFinished": "",
+            "scriptableObjectKey": "",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MessageBoxAction, Assembly-CSharp",
+        "label": "Message Box",
+        "description": "Display a message box.",
+        "component": "MessageBoxActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MessageBoxAction, Assembly-CSharp",
+            "windowTitle": "",
+            "title": "",
+            "message": "",
+            "eventType": null,
+            "buttonType": "Continue",
+            "imageKey": "",
+            "clipRelativePath": null,
+            "nextMissionID": "",
+            "isMissionSummary": false,
+            "messageDescriptions": {
+                "MessageDescriptionCollection": []
+            },
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionAudioAction, Assembly-CSharp",
+        "label": "Audio",
+        "description": "Play audio when this stage is activated.",
+        "component": "MissionAudioActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionAudioAction, Assembly-CSharp",
+            "StageEvent": ""
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionActionOABSettings, Assembly-CSharp",
+        "label": "OAB Settings",
+        "description": "Special settings for the OAB",
+        "component": "MissionActionOABSettingsEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionActionOABSettings, Assembly-CSharp",
+            "RevertBackupVesselToOAB": false,
+            "ClearSelectedWorkspacesToLoadOnStart": false,
+            "SelectedWorkspaces": [],
+            "FavoriteParts": [],
+            "PartCategory": "none",
+            "VesselBackupFileKey": null,
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionCharacterDialogAction, Assembly-CSharp",
+        "label": "Character Dialog",
+        "description": "Character dialog window.",
+        "component": "MissionCharacterDialogActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionCharacterDialogAction, Assembly-CSharp",
+            "CharacterNameLocKey": "",
+            "CharacterIconKey": "",
+            "Dialogs": {
+                "Entries": [
+                    {
+                        "ShowsInHistory": true,
+                        "DialogEntryType": "Text",
+                        "LocKey": "",
+                        "ContentAddressableKey": ""
+                    }
+                ]
+            },
+            "EventTypeOnClosed": "",
+            "StageEvent": ""
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionCreateSnapshotAction, Assembly-CSharp",
+        "label": "Create Snapshot",
+        "description": "Create a snapshot of this mission for reloading.",
+        "component": "MissionCreateSnapshotActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionCreateSnapshotAction, Assembly-CSharp",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionDestinationPosition, Assembly-CSharp",
+        "label": "Destination Position",
+        "description": "Sets a celestial body position based on altitude, long and latitude coordinates.",
+        "component": "MissionDestinationPositionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionDestinationPosition, Assembly-CSharp",
+            "celestialBodyName": "",
+            "cb_Coords": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionDisableInputAction, Assembly-CSharp",
+        "label": "Disable Input",
+        "description": "Disable input.",
+        "component": "MissionDisableInputActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionDisableInputAction, Assembly-CSharp",
+            "InputType": "Global",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionHighlightAction, Assembly-CSharp",
+        "label": "Highlight",
+        "description": "Displays a custom highlight.",
+        "component": "MissionHighlightActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionHighlightAction, Assembly-CSharp",
+            "highlightType": "PART",
+            "trackInNavball": false,
+            "attachNodeID": "",
+            "attachNodehighlight": null,
+            "trackingGUID": null,
+            "partName": "",
+            "lastPartPlaced": false,
+            "celestialBodyName": "",
+            "prefabKey": "",
+            "offset": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "orientation": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "cb_Coordinates": false,
+            "cb_Coords": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "maneuverGizmoHandle": "None",
+            "orbitNodeTrajectoryEvent": "ClosestApproach",
+            "timeFromOrbitTrajectory": 0.0,
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionIndicatorAction, Assembly-CSharp",
+        "label": "Indicator",
+        "description": "Creates an indicator for trracking a position in 3D or just staying on a normalized screen position for pointing 2D elements.",
+        "component": "MissionIndicatorActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionIndicatorAction, Assembly-CSharp",
+            "title": "",
+            "body": "",
+            "prefabKey": "",
+            "tagName": "",
+            "normalizedPos": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "offset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "mainSpriteKey": "",
+            "mainTextureKey": "",
+            "imageSize": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "stayAnchored": false,
+            "animateOffScreen": false,
+            "showTitleOnly": false,
+            "closeTime": 0.0,
+            "trackingObjectID": "",
+            "trackingGUID": null,
+            "loopVideoKey": "",
+            "partName": null,
+            "lastPartPlaced": false,
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionPauseAction, Assembly-CSharp",
+        "label": "Pause",
+        "description": "Pause the game while this stage is active.",
+        "component": "MissionPauseActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionPauseAction, Assembly-CSharp",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionReloadSnapshotAction, Assembly-CSharp",
+        "label": "Reload Snapshot",
+        "description": "Reload the last saved snapshot of this mission.",
+        "component": "MissionReloadSnapshotActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionReloadSnapshotAction, Assembly-CSharp",
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionResolutionAction, Assembly-CSharp",
+        "label": "Resolution",
+        "description": "Set mission state.",
+        "component": "MissionResolutionActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionResolutionAction, Assembly-CSharp",
+            "MissionResolution": "Complete",
+            "summary_PrefabKey": null,
+            "waitForSummaryDismissed": false,
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionSetViewStateAction, Assembly-CSharp",
+        "label": "Set View State",
+        "description": "Set UI View State.",
+        "component": "MissionSetViewStateActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionSetViewStateAction, Assembly-CSharp",
+            "viewState": {
+                "ViewDefinitions": [
+                    {
+                        "ID": "OABLaunchButton",
+                        "State": "Active"
+                    }
+                ]
+            },
+            "restorePreviousView": false,
+            "StageEvent": null
+        }
+    },
+    {
+        "value": "KSP.Game.Missions.MissionScriptAction, Assembly-CSharp",
+        "label": "Script",
+        "description": "Run lua script.",
+        "component": "MissionScriptActionEditor",
+        "defaults": {
+            "$type": "KSP.Game.Missions.MissionScriptAction, Assembly-CSharp",
+            "luascript": "",
+            "StageEvent": null
+        }
+    }
+]

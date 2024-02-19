@@ -1,0 +1,12 @@
+[
+    {
+        "description": "Player has advanced to the next tutorial step.",
+        "label": "Go To Next Tutorial Step",
+        "value": "KSP.Messages.GoToNextTutorialStep, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    },
+    {
+        "description": "Called to spawn the triumph window related to the mission being submitted.",
+        "label": "Spawn Triumph Window",
+        "value": "KSP.Messages.SpawnTriumphWindow, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null"
+    }
+]

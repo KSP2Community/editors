@@ -15,13 +15,7 @@ export default function ConditionSetEditor({condition, updateData}) {
                 title="Condition children"
                 addButtonText="Add condition"
                 noItemsText="No conditions"
-                itemTitle={({item, index}) => {
-                  if (!item || !item.ConditionType) {
-                    return `Condition #${index + 1}`
-                  }
-
-                  return getConditionLabel(item)
-                }}
+                itemTitle={getConditionLabel}
                 addButtonClick={() => {
                   updateData("Children", [
                     ...condition.Children,

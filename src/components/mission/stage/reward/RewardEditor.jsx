@@ -1,7 +1,7 @@
 import * as React from 'react'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
 import TextInput from '../../inputs/TextInput.jsx'
-import rewardTypes from '/src/data/mission/stage/reward/reward-type.json'
+import rewardTypes from '/src/data/mission/stage/reward/reward-types.json'
 
 export default function RewardEditor({reward, updateRewardData}) {
   return <>
