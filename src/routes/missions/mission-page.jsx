@@ -16,7 +16,7 @@ export default function MissionPage() {
     ? vs2015
     : stackoverflowLight
 
-  const {missionData, updateMissionData} = useMission()
+  const {missionData} = useMission()
 
   return (
     <Box sx={{
@@ -28,7 +28,7 @@ export default function MissionPage() {
       gap: '1rem',
       maxHeight: {sm: 'auto', md: '100%'},
     }}>
-      <MissionEditor missionData={missionData} updateMissionData={updateMissionData} sx={{
+      <MissionEditor sx={{
         gridArea: 'content',
         minWidth: 0,
         minHeight: 0,

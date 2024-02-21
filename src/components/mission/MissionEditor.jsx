@@ -9,9 +9,10 @@ import {
   Tooltip,
   Typography
 } from '@mui/joy'
-import {useState} from 'react'
 import {v4 as uuidv4} from 'uuid'
 import {FiFile, FiFolder, FiSave} from 'react-icons/fi'
+import {useDropzone} from 'react-dropzone'
+import save from 'save-file'
 
 import TextInput from './inputs/TextInput.jsx'
 import DropdownInput from './inputs/DropdownInput.jsx'
@@ -21,6 +22,7 @@ import ContentBranchEditor from './branch/ContentBranchEditor.jsx'
 import StageEditor from './stage/StageEditor.jsx'
 import ArrayInput from './inputs/ArrayInput.jsx'
 import {parseMission, stringifyMission} from '../../utils/missions.js'
+import {useMission} from '../../contexts/MissionContext.jsx'
 
 import missionDefaults from '/src/data/mission/mission-defaults.json'
 import missionTypes from '/src/data/mission/mission-types.json'
@@ -31,9 +33,6 @@ import missionUiDisplayType from '/src/data/mission/mission-ui-display-types.jso
 import triumphLoopVideos from '/src/data/mission/triumph-loop-video-keys.json'
 import stageDefaults from '/src/data/mission/stage/stage-defaults.json'
 import contentBranchDefaults from '/src/data/mission/branch/content-branch-defaults.json'
-import save from 'save-file'
-import {useDropzone} from 'react-dropzone'
-import {useMission} from '../../contexts/MissionContext.jsx'
 
 function getMaxStageID(missionStages) {
   return missionStages.reduce((max, stage) => {
@@ -42,9 +41,8 @@ function getMaxStageID(missionStages) {
   }, -1)
 }
 
-export default function MissionEditor({missionData, updateMissionData: updateMissionDataBase, ...props}) {
-  const {setMissionData} = useMission()
-  const [isDirty, setIsDirty] = useState(false)
+export default function MissionEditor({...props}) {
+  const {missionData, updateMissionData, setMissionData} = useMission()
   const {open: openFileDialog} = useDropzone({
     noClick: true,
     noKeyboard: true,
@@ -57,51 +55,47 @@ export default function MissionEditor({missionData, updateMissionData: updateMis
       const reader = new FileReader()
       reader.onload = () => {
         const data = parseMission(reader.result, isPatch)
-        setMissionData(data)
-        setIsDirty(false)
+        setMissionData({isDirty: false, data})
       }
       reader.readAsText(files[0])
     }
-  });
-
-  const updateMissionData = (name, value) => {
-    updateMissionDataBase(name, value)
-    if (stringifyMission(missionDefaults) !== stringifyMission(missionData)) {
-      setIsDirty(true)
-    }
-  }
+  })
 
   const newMissionHandler = () => {
-    if (isDirty && stringifyMission(missionDefaults) !== stringifyMission(missionData)
-      && !confirm("Are you sure you want to create a new mission? All unsaved changes will be lost."))
-    {
+    if (missionData.isDirty && !confirm("Are you sure you want to create a new mission? All unsaved changes will be lost.")) {
       return
     }
 
-    setMissionData(missionDefaults)
-    setIsDirty(false)
+    setMissionData({isDirty: false, data: missionDefaults})
   }
 
   const openMissionHandler = () => {
-    if (isDirty && stringifyMission(missionDefaults) !== stringifyMission(missionData)
-      && !confirm("Are you sure you want to create a new mission? All unsaved changes will be lost."))
-    {
+    if (missionData.isDirty && !confirm("Are you sure you want to create a new mission? All unsaved changes will be lost.")) {
       return
     }
 
     openFileDialog()
   }
 
+  function saveTxtToFile(fileName, textData) {
+    const urlToBlob = URL.createObjectURL(new Blob([textData], {type: 'text/plain'}));
+    const a = document.createElement('a');
+    a.href = urlToBlob;
+    a.download = fileName;
+    a.click();
+    URL.revokeObjectURL(urlToBlob);
+  }
+
   const saveMissionHandler = async isPatch => {
-    if (!missionData.ID) {
+    if (!missionData.data.ID) {
       alert("Mission ID is required!")
       return
     }
 
-    const data = stringifyMission(missionData, isPatch)
-    await save(data, `${missionData.ID}${isPatch ? '.patch' : '.json'}`)
+    const data = stringifyMission(missionData.data, isPatch)
+    saveTxtToFile(`${missionData.data.ID}${isPatch ? '.patch' : '.json'}`, data)
 
-    setIsDirty(false)
+    setMissionData({isDirty: false, data: missionData.data})
   }
 
   return <>
@@ -114,9 +108,18 @@ export default function MissionEditor({missionData, updateMissionData: updateMis
         flexDirection: 'row',
         justifyContent: 'space-between',
       }}>
-        <Typography level="h4" component="h2">
-          {missionData.ID && `Mission ${missionData.ID}` || "New mission"}
-        </Typography>
+        <Box sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: '0.5rem',
+        }}>
+          <Typography level="h4" component="h2">
+            {missionData.data.ID && `Mission ${missionData.data.ID}` || "New mission"}
+          </Typography>
+          {missionData.isDirty && <Typography> (unsaved changes)</Typography>}
+        </Box>
+
         <Box sx={{
           display: 'flex',
           gap: '0.5rem',
@@ -157,36 +160,36 @@ export default function MissionEditor({missionData, updateMissionData: updateMis
         marginX: '-0.5rem',
         paddingX: '0.5rem',
       }}>
-        <TextInput name="ID" label="Mission ID" value={missionData.ID} onChange={updateMissionData}/>
-        <TextInput name="name" label="Name Localization Key" value={missionData.name}
+        <TextInput name="ID" label="Mission ID" value={missionData.data.ID} onChange={updateMissionData}/>
+        <TextInput name="name" label="Name Localization Key" value={missionData.data.name}
                    onChange={updateMissionData}/>
-        <TextInput name="description" label="Description Localization Key" value={missionData.description}
+        <TextInput name="description" label="Description Localization Key" value={missionData.data.description}
                    onChange={updateMissionData}/>
-        <DropdownInput name="type" label="Type" options={missionTypes} value={missionData.type}
+        <DropdownInput name="type" label="Type" options={missionTypes} value={missionData.data.type}
                        onChange={updateMissionData}/>
-        <DropdownInput name="Owner" label="Owner" options={missionOwners} value={missionData.Owner}
+        <DropdownInput name="Owner" label="Owner" options={missionOwners} value={missionData.data.Owner}
                        onChange={updateMissionData}/>
-        <DropdownInput name="state" label="State" options={missionStates} value={missionData.state}
+        <DropdownInput name="state" label="State" options={missionStates} value={missionData.data.state}
                        onChange={updateMissionData}/>
-        <Toggle name="Hidden" label="Hidden" value={missionData.Hidden} onChange={updateMissionData}/>
+        <Toggle name="Hidden" label="Hidden" value={missionData.data.Hidden} onChange={updateMissionData}/>
         <AutocompleteInput name="MissionGranterKey" label="Mission Granter" options={missionGranters}
-                           value={missionData.MissionGranterKey} onChange={updateMissionData}/>
+                           value={missionData.data.MissionGranterKey} onChange={updateMissionData}/>
         <AutocompleteInput name="TriumphLoopVideoKey" label="Triumph Loop Video" options={triumphLoopVideos}
-                           value={missionData.TriumphLoopVideoKey} onChange={updateMissionData}/>
-        <Toggle name="VisibleRewards" label="Rewards Visible" value={missionData.VisibleRewards}
+                           value={missionData.data.TriumphLoopVideoKey} onChange={updateMissionData}/>
+        <Toggle name="VisibleRewards" label="Rewards Visible" value={missionData.data.VisibleRewards}
                 onChange={updateMissionData}/>
         <DropdownInput name="uiDisplayType" label="UI Display Type" options={missionUiDisplayType}
-                       value={missionData.uiDisplayType} onChange={updateMissionData}/>
+                       value={missionData.data.uiDisplayType} onChange={updateMissionData}/>
 
         <ArrayInput level={0}
-                    array={missionData.missionStages}
+                    array={missionData.data.missionStages}
                     title="Stages"
                     addButtonText="Add stage"
                     noItemsText="No stages"
                     itemTitle={({item}) => item.name || `ID: ${item.StageID}`}
                     addButtonClick={() => {
-                      const newStageID = getMaxStageID(missionData.missionStages) + 1
-                      updateMissionData("missionStages", [...missionData.missionStages, {
+                      const newStageID = getMaxStageID(missionData.data.missionStages) + 1
+                      updateMissionData("missionStages", [...missionData.data.missionStages, {
                         StageID: newStageID,
                         __uuid: uuidv4(),
                         ...stageDefaults
@@ -194,13 +197,13 @@ export default function MissionEditor({missionData, updateMissionData: updateMis
                       updateMissionData("maxStageID", newStageID)
                     }}
                     updateData={index => (name, value) => {
-                      const newStages = [...missionData.missionStages]
+                      const newStages = [...missionData.data.missionStages]
                       newStages[index][name] = value
                       updateMissionData("missionStages", newStages)
                       updateMissionData("maxStageID", getMaxStageID(newStages))
                     }}
                     deleteData={index => {
-                      const newStages = [...missionData.missionStages]
+                      const newStages = [...missionData.data.missionStages]
                       newStages.splice(index, 1)
                       updateMissionData("missionStages", newStages)
                       updateMissionData("maxStageID", getMaxStageID(newStages))
@@ -210,22 +213,22 @@ export default function MissionEditor({missionData, updateMissionData: updateMis
         />
 
         <ArrayInput level={0}
-                    array={missionData.ContentBranches}
+                    array={missionData.data.ContentBranches}
                     title="Content branches"
                     addButtonText="Add branch"
                     noItemsText="No content branches"
                     itemTitle={({item}) => item.ID}
-                    addButtonClick={() => updateMissionData("ContentBranches", [...missionData.ContentBranches, {
+                    addButtonClick={() => updateMissionData("ContentBranches", [...missionData.data.ContentBranches, {
                       __uuid: uuidv4(),
                       ...contentBranchDefaults
                     }])}
                     updateData={(index) => (name, value) => {
-                      const newBranches = [...missionData.ContentBranches]
+                      const newBranches = [...missionData.data.ContentBranches]
                       newBranches[index][name] = value
                       updateMissionData("ContentBranches", newBranches)
                     }}
                     deleteData={index => {
-                      const newBranches = [...missionData.ContentBranches]
+                      const newBranches = [...missionData.data.ContentBranches]
                       newBranches.splice(index, 1)
                       updateMissionData("ContentBranches", newBranches)
                     }}
