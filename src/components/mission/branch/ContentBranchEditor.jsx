@@ -1,4 +1,3 @@
-import * as React from 'react'
 import DropdownInput from '../inputs/DropdownInput.jsx'
 
 import contentBranchIDKeys from '/src/data/mission/branch/content-branch-id-keys.json'

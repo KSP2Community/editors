@@ -1,4 +1,3 @@
-import * as React from 'react'
 import DropdownInput from '../../inputs/DropdownInput.jsx'
 import TextInput from '../../inputs/TextInput.jsx'
 import rewardTypes from '/src/data/mission/stage/reward/reward-types.json'

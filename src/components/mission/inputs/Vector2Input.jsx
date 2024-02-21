@@ -1,7 +1,6 @@
 import {tryParseFloat} from '../../../utils/strings.js'
 import {Box} from '@mui/joy'
 import TextInput from './TextInput.jsx'
-import * as React from 'react'
 
 export default function Vector2Input({vector, updateData}) {
   const updateFloatData = (name, value) => {

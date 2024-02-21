@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {v4 as uuidv4} from 'uuid'
 import {tryParseFloat} from '../../../utils/strings.js'
 
@@ -8,7 +7,7 @@ import ComplexAutocompleteInput from '../inputs/ComplexAutocompleteInput.jsx'
 import AutocompleteInput from '../inputs/AutocompleteInput.jsx'
 import Toggle from '../inputs/Toggle.jsx'
 import ArrayInput from '../inputs/ArrayInput.jsx'
-import Vector2Input from '../inputs/Vector3Input.jsx'
+import Vector2Input from '../inputs/Vector2Input.jsx'
 import Vector3Input from '../inputs/Vector3Input.jsx'
 
 import missionOwners from '/src/data/mission/mission-owners.json'

@@ -52,20 +52,17 @@ export function getConditionLabel({item, index}) {
       if (!item.EventTypeAQN) {
         return typeLabel
       }
-      let eventTypeLabel = eventTypes.find(type => type.value === item.EventTypeAQN)?.label
-      if (!eventTypeLabel) {
-        eventTypeLabel = getClassNameFromAQN(item.EventTypeAQN)
-      }
-      return `${typeLabel}: ${eventTypeLabel}`
+      return `${typeLabel}: ${
+        eventTypes.find(type => type.value === item.EventTypeAQN)?.label || getClassNameFromAQN(item.EventTypeAQN)
+      }`
     case "PropertyCondition":
       if (!item.PropertyTypeAQN) {
         return typeLabel
       }
-      let propertyTypeLabel = propertyTypes.find(type => type.value === item.PropertyTypeAQN)?.label
-      if (!propertyTypeLabel) {
-        propertyTypeLabel = getClassNameFromAQN(item.PropertyTypeAQN)
-      }
-      return `${typeLabel}: ${propertyTypeLabel}`
+      return `${typeLabel}: ${
+        propertyTypes.find(type => type.value === item.PropertyTypeAQN)?.label
+        || getClassNameFromAQN(item.PropertyTypeAQN)
+      }`
   }
 }
 

@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {tryParseFloat} from '../../../utils/strings.js'
 import {Box, FormControl, FormLabel} from '@mui/joy'
 import TextInput from './TextInput.jsx'

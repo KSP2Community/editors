@@ -1,4 +1,3 @@
-import * as React from 'react'
 import {Box, Sheet} from '@mui/joy'
 
 function Root(props) {

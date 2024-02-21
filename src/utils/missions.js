@@ -4,7 +4,8 @@ export function stringifyMission(missionData, isPatch) {
       return undefined
     }
 
-    if (value instanceof Object && Object.keys(value).length === 1 && value.hasOwnProperty('__uuid')) {
+    if (value instanceof Object && Object.keys(value).length === 1
+      && Object.prototype.hasOwnProperty.call(Object, value, '__uuid')) {
       return null
     }
 

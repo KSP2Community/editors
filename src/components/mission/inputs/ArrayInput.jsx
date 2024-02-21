@@ -93,7 +93,7 @@ export default function ArrayInput(
                   {renderComponent({item, index, updateData: updateData(index)})}
                   <Button variant="outlined" color="danger" startDecorator={<FiTrash/>}
                           onClick={() => setDeleteDialogOpenIndex(index)}>
-                    Delete "{truncate(itemTitleText, 50)}"
+                    Delete &quot;{truncate(itemTitleText, 50)}&quot;
                   </Button>
                   <WarningDialog title="Confirmation"
                                  content={`Are you sure you want to delete "${truncate(itemTitleText, 50)}"`}

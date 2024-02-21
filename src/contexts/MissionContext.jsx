@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react';
+import { createContext, useState, useContext } from 'react';
 import missionDefaults from '/src/data/mission/mission-defaults.json'
 
 const MissionContext = createContext(null);

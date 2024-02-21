@@ -1,7 +1,6 @@
 import {CssBaseline, CssVarsProvider} from '@mui/joy'
 import * as Layout from '../components/Layout.jsx'
 import Header from '../components/Header.jsx'
-import React from 'react'
 import {Outlet} from 'react-router-dom'
 
 export default function Root() {

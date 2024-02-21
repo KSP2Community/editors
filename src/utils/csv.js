@@ -41,7 +41,7 @@ export function csvToJs(csvData) {
   }
 
   const columnHeaders = parsedRows[0].split(',')
-  const rowData = parsedRows.slice(1).map(row => {
+  return parsedRows.slice(1).map(row => {
     let parsedCells = []
     let currentCell = ''
     insideQuotes = false
@@ -78,8 +78,6 @@ export function csvToJs(csvData) {
 
     return rowObject
   })
-
-  return rowData
 }
 
 //
