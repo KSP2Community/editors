@@ -18,9 +18,11 @@
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.22.0",
     "react-syntax-highlighter": "^15.5.0",
+    "save-file": "^2.3.1",
     "sort-by": "^0.0.2",
     "uuid": "^9.0.1"
   },

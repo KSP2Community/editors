@@ -16,6 +16,7 @@ export function MissionProvider({ children }) {
 
   const value = {
     missionData,
+    setMissionData,
     updateMissionData
   };
 

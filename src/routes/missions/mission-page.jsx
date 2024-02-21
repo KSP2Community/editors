@@ -9,6 +9,7 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import {useMission} from '/src/contexts/MissionContext.jsx'
 import MissionEditor from '../../components/mission/MissionEditor.jsx'
 import {stackoverflowLight, vs2015} from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import {stringifyMission} from '../../utils/missions.js'
 
 export default function MissionPage() {
   const {mode, systemMode} = useColorScheme()
@@ -46,17 +47,7 @@ export default function MissionPage() {
           padding: '0.5rem',
           borderRadius: '0.5rem',
         }}>
-          {JSON.stringify(missionData, (key, value) => {
-            if (key === '__uuid') {
-              return undefined
-            }
-
-            if (value instanceof Object && Object.keys(value).length === 1 && value.hasOwnProperty('__uuid')) {
-              return null
-            }
-
-            return value
-          }, 2)}
+          {stringifyMission(missionData)}
         </SyntaxHighlighter>
       </Card>
     </Box>

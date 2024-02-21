@@ -1,4 +1,4 @@
-export const jsToCsv = obj => {
+export function jsToCsv(obj) {
   const headers = Object.keys(obj[0])
   const rows = obj.map(obj => headers.map(header => obj[header]))
   const sanitizedRows = rows.map(row => row.map(cell => {
@@ -10,7 +10,7 @@ export const jsToCsv = obj => {
   return [headers, ...sanitizedRows].map(row => row.join(',')).join('\n')
 }
 
-export const csvToJs = csvData => {
+export function csvToJs(csvData) {
   let parsedRows = []
   let currentRow = ''
   let insideQuotes = false
@@ -81,6 +81,7 @@ export const csvToJs = csvData => {
 
   return rowData
 }
+
 //
 // const csvTestingData = `Key,Type,Desc,English,Spanish,$Context
 // my/key/hello,Text,,Hello!,¡Hola!,This is how you say hello
