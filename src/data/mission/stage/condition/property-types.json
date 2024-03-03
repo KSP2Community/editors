@@ -402,7 +402,7 @@
         "category": "Vehicle"
     },
     {
-        "description": "True if vessel has a command module.",
+        "description": "The vehicle has a specific part count.",
         "value": "KSP.Messages.PropertyWatchers.PartCount, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
         "label": "Part Count",
         "category": "Vehicle"
