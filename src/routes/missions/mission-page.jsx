@@ -46,7 +46,7 @@ export default function MissionPage() {
           padding: '0.5rem',
           borderRadius: '0.5rem',
         }}>
-          {stringifyMission(missionData)}
+          {stringifyMission(missionData.data)}
         </SyntaxHighlighter>
       </Card>
     </Box>

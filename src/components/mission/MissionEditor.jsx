@@ -12,7 +12,6 @@ import {
 import {v4 as uuidv4} from 'uuid'
 import {FiFile, FiFolder, FiSave} from 'react-icons/fi'
 import {useDropzone} from 'react-dropzone'
-import save from 'save-file'
 
 import TextInput from './inputs/TextInput.jsx'
 import DropdownInput from './inputs/DropdownInput.jsx'

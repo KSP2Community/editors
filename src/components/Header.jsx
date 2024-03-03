@@ -35,6 +35,11 @@ function ColorSchemeToggle() {
 }
 
 export default function Header() {
+  const routes = [
+    { path: "/missions", label: "Mission editor" },
+    // { path: "/swinfo", label: "swinfo.json" },
+  ]
+
   return (
     <Box
       sx={{
@@ -73,37 +78,24 @@ export default function Header() {
               <FiHome/>
             </IconButton>
           </Tooltip>
-          <Button
-            variant="plain"
-            color="neutral"
-            component={NavLink}
-            to="/missions"
-            size="sm"
-            sx={{
-              alignSelf: 'center',
-              '&.active': {
-                bgcolor: 'primary.softActiveBg'
-              }
-            }}
-          >
-            Mission editor
-          </Button>
-          <Button
-            variant="plain"
-            color="neutral"
-            aria-pressed="false"
-            component={NavLink}
-            to="/swinfo"
-            size="sm"
-            sx={{
-              alignSelf: 'center',
-              '&.active': {
-                bgcolor: 'primary.softActiveBg'
-              }
-            }}
-          >
-            swinfo.json
-          </Button>
+          {routes.map((route) => (
+            <Button
+              key={route.path}
+              variant="plain"
+              color="neutral"
+              component={NavLink}
+              to={route.path}
+              size="sm"
+              sx={{
+                alignSelf: 'center',
+                '&.active': {
+                  bgcolor: 'primary.softActiveBg'
+                }
+              }}
+            >
+              {route.label}
+            </Button>
+          ))}
         </Stack>
       </Box>
       <Typography variant="h2" level="h4" sx={{

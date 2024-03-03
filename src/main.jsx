@@ -18,11 +18,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
-        errorElement: <Home/>,
+        errorElement: <ErrorPage/>,
         children: [
           {
             path: '/',
-            element: <ErrorPage/>
+            element: <Home/>
           },
           {
             path: '/missions',
